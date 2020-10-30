@@ -1,0 +1,9 @@
+postgres:
+  host: 120.25.237.88
+  port: 5432
+  password: nlyadminlte
+  username: nly
+  database: nly_test_2
+  sslmode: disable
+  maxidleconns: 12
+  maxopenconns: 20
