@@ -7,3 +7,13 @@ postgres:
   sslmode: disable
   maxidleconns: 12
   maxopenconns: 20
+zap:
+  level: 'info'
+  format: 'console'
+  prefix: '[NLY-GIN-ADMIN]'
+  director: 'log'
+  link-name: 'latest_log'
+  show-line: true
+  encode-level: 'LowercaseColorLevelEncoder'
+  stacktrace-key: 'stacktrace'
+  log-in-console: true

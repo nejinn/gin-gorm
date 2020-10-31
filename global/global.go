@@ -1,13 +1,14 @@
 package global
 
 import (
-	"gin-vue-admin/config"
 	"github.com/jinzhu/gorm"
 	"go.uber.org/zap"
+	"note/config"
 )
 
+// 配置全局变量
 var (
-	GVA_DB     *gorm.DB
-	GVA_CONFIG config.Server
-	GVA_LOG    *zap.Logger
+	NLY_DB     *gorm.DB
+	NLY_LOG    *zap.Logger
+	NLY_CONFIG config.Server
 )

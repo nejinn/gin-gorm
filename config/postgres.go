@@ -1,9 +1,6 @@
 package config
 
-type PostgresYaml struct {
-	Postgres PostgresConf `yaml:"postgres"`
-}
-
+// 构造 postgres 配置结构体， 配置文件为 config.yaml
 type PostgresConf struct {
 	Host         string `yaml:"host"`
 	Port         string `yaml:"port"`
