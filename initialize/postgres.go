@@ -12,12 +12,15 @@ import (
 
 // 迁移数据库
 func RegisterModel(db *gorm.DB) {
+	global.NLY_LOG.Info("开始迁移数据库")
 	db.AutoMigrate(&model.User{})
+	global.NLY_LOG.Info("迁移表 User 成功")
 	global.NLY_LOG.Info("迁移数据库成功")
 }
 
 // 构造 数据库初始化函数
 func InitPostgres() *gorm.DB {
+	global.NLY_LOG.Info("开始初始化数据库")
 	hostname := fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s sslmode=%s",
 		global.NLY_CONFIG.Postgres.Host,
 		global.NLY_CONFIG.Postgres.Port,

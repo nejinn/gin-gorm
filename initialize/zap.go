@@ -14,7 +14,7 @@ var level zapcore.Level
 
 func Zap() (logger *zap.Logger) {
 	if ok, _ := utils.PathExists(global.NLY_CONFIG.Zap.Director); !ok { // 判断是否有Director文件夹
-		fmt.Printf("create %v directory\n", global.NLY_CONFIG.Zap.Director)
+		fmt.Printf("创建 %v 日志文件夹\n", global.NLY_CONFIG.Zap.Director)
 		_ = os.Mkdir(global.NLY_CONFIG.Zap.Director, os.ModePerm)
 	}
 
