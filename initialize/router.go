@@ -31,7 +31,6 @@ func Routers() *gin.Engine {
 	global.NLY_LOG.Info("开始注册路由")
 	ApiGroup := Router.Group("")
 	router.InitUserRouers(ApiGroup) // 注册用户路由
-	global.NLY_LOG.Info("注册 user 路由出成功")
 	global.NLY_LOG.Info("全部路由注册成功")
 	return Router
 }
