@@ -1,10 +1,10 @@
 postgres:
-  host: 120.25.237.88
-  port: 5432
-  password: nlyadminlte
-  username: nly
-  database: nly_test_2
-  sslmode: disable
+  host: '120.25.237.88'
+  port: '5432'
+  password: 'nlyadminlte'
+  username: 'nly'
+  database: 'nly_test_2'
+  sslmode: 'disable'
   maxidleconns: 12
   maxopenconns: 20
 zap:
@@ -24,3 +24,7 @@ system:
   db-type: 'mysql'
   oss-type: 'local'
   use-multipoint: false
+
+jwt:
+  sign-key: 'nlyadminltevue'
+  token-expire-time: 3600
