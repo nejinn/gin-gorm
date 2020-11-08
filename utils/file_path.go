@@ -26,7 +26,7 @@ func CreateDir(dirs ...string) (err error) {
 			return err
 		}
 		if !exist {
-			global.NLY_LOG.Debug("创建日志文件夹：" + v)
+			global.NLY_LOG.Debug("创建文件夹：" + v)
 			err = os.MkdirAll(v, os.ModePerm)
 			if err != nil {
 				global.NLY_LOG.Error("批量创建文件夹："+v, zap.Any(" error:", err))

@@ -4,6 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"go.uber.org/zap"
+	"net/http"
 	_ "note/docs"
 	"note/global"
 	"note/middleware"
@@ -17,10 +19,8 @@ func Routers() *gin.Engine {
 	var Router = gin.New()
 	Router.Use(middleware.GinLogger(), middleware.GinRecovery(true))
 	global.NLY_LOG.Info("使用 Zap 自定义 Logger 和 Recovery ")
-
-	//Router.StaticFS(global.GVA_CONFIG.Local.Path, http.Dir(global.GVA_CONFIG.Local.Path)) // 为用户头像和文件提供静态地址
-	// Router.Use(middleware.LoadTls())  // 打开就能玩https了
-	//global.NLY_LOG.Info("use middleware logger")
+	Router.StaticFS(global.NLY_CONFIG.Static.Path, http.Dir(global.NLY_CONFIG.Static.Path))
+	global.NLY_LOG.Info("注册静态文件目录:", zap.String("dir", global.NLY_CONFIG.Static.Path))
 	// 跨域
 	Router.Use(middleware.Cors())
 	global.NLY_LOG.Info("注册跨域中间件")

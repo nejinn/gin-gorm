@@ -6,4 +6,5 @@ type Server struct {
 	Postgres PostgresConf `yaml:"postgres"`
 	System   SystemConf   `yaml:"system"`
 	Jwt      JwtConf      `yaml:"jwt"`
+	Static   StaticConf   `yaml:"static"`
 }
