@@ -1,0 +1,26 @@
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:37.152	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:37.567	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:37.568	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.211	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.211	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.211	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.211	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.213	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.213	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.213	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.213	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.213	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:04:39.214	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:14.877	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:15.307	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:15.307	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.907	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.907	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.907	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.907	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.907	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.908	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.908	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.908	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.908	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/11/06 - 23:05:16.909	[34minfo[0m	server run success on 	{"address": ":8888"}

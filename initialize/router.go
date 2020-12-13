@@ -28,7 +28,7 @@ func Routers() *gin.Engine {
 	global.NLY_LOG.Info("register swagger handler")
 	// 方便统一添加路由组前缀 多服务器上线使用
 	global.NLY_LOG.Info("开始注册路由")
-	ApiGroup := Router.Group("")
+	ApiGroup := Router.Group("api/v1/")
 	router.InitUserRouers(ApiGroup) // 注册用户路由
 	global.NLY_LOG.Info("全部路由注册成功")
 	return Router

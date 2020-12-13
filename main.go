@@ -23,8 +23,6 @@ func main() {
 
 	// 初始化数据库
 	global.NLY_DB = initialize.InitPostgres()
-	// 注册model
-	initialize.RegisterModel(global.NLY_DB)
 	db := global.NLY_DB.DB()
 	defer db.Close()
 	core.RunServer()

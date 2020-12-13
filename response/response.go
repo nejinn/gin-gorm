@@ -48,3 +48,12 @@ func ErrorMsg(c *gin.Context, code int, msg string) {
 		},
 	})
 }
+
+func ErrorMsgWithJson(c *gin.Context, errJson OkRet) {
+	c.JSON(http.StatusOK, MsgResponse{
+		Ret: OkRet{
+			Code: errJson.Code,
+			Msg:  errJson.Msg,
+		},
+	})
+}

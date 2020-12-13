@@ -90,5 +90,4 @@ func DispenseToken(c *gin.Context, user *model.User) {
 		Token: token,
 	}
 	response.OkData(c, response.Ok, date)
-	return
 }

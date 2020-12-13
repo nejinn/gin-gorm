@@ -4,50 +4,42 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"note/global"
+	"note/middleware"
+	"note/model"
 	"note/utils"
 	"note/view"
 	"time"
-
 	//"note/model"
 	"note/response"
 )
 
-// @Tags SysUser
-// @Summary 分页获取用户列表
-// @Security ApiKeyAuth
-// @accept application/json
-// @Produce application/json
-// @Param data body request.PageInfo true "分页获取用户列表"
-// @Success 200 {string} string "{"success":true,"data":{},"msg":"获取成功"}"
-// @Router /user/get_user_list [get]
 func GetUserList(c *gin.Context) {
-	type User struct {
-		User string
-	}
-	user := User{
-		User: "ssss",
-	}
+	var user []model.User
+	global.NLY_DB.Find(&user)
 	response.OkData(c, response.Ok, user)
 }
 
 func LoginAdmin(c *gin.Context) {
-	type L struct {
-		Username string `json:"username"`
-		Password string `json:"password"`
+	l := view.LoginStruct{}
+	if err := c.ShouldBindJSON(&l); err != nil {
+		response.ErrorMsgWithJson(c, response.LoginError)
 	}
-	l := L{}
-	_ = c.ShouldBindJSON(&l)
-
+	user := &model.User{Username: l.Username, Password: l.Password}
+	if err, userInfo := view.Login(user); err != nil {
+		response.ErrorMsg(c, response.LoginError.Code, err.Error())
+	} else {
+		middleware.DispenseToken(c, userInfo)
+	}
 }
 
 // 注册用户
 func Register(c *gin.Context) {
-	r := view.RegisterStruct{}
+	var r model.User
 	_ = c.ShouldBindJSON(&r)
 
 	err := view.Register(&r)
 	if err != nil {
-		response.ErrorMsg(c, response.RegisterError.Code, err.Error())
+		response.ErrorMsg(c, response.LoginError.Code, err.Error())
 	} else {
 		response.OkData(c, response.Ok, global.NLY_NIL_RES)
 	}
@@ -74,5 +66,4 @@ func UploadImg(c *gin.Context) {
 		Path: fmt.Sprintf("%s/%s", c.Request.Host, filepath),
 	}
 	response.OkData(c, response.Ok, data)
-
 }

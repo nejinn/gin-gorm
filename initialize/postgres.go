@@ -37,6 +37,7 @@ func InitPostgres() *gorm.DB {
 		global.NLY_LOG.Info("postgres启动成功: ", zap.String("hostname", hostname))
 		db.DB().SetMaxIdleConns(global.NLY_CONFIG.Postgres.MaxIdleConns)
 		db.DB().SetMaxOpenConns(global.NLY_CONFIG.Postgres.MaxOpenConns)
+		RegisterModel(db)
 		return db
 	}
 }

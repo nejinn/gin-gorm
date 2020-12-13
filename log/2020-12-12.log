@@ -1,0 +1,277 @@
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:08.770	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 107.4937753}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:14.698	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:15.057	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:15.057	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.736	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.741	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.741	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.741	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.742	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:18.743	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:24.457	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.794963}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:00:28.146	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.9328375}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:03.695	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:03.999	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:03.999	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.438	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.439	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.439	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.439	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:07.440	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:28.890	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:29.218	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:29.218	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.057	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.058	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:02:33.059	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:02.380	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:02.678	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:02.678	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.168	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.168	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.169	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:03:06.171	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:11.609	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:11.915	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:11.915	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.240	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:05:15.241	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:23.065	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:23.361	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:23.361	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.751	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.751	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.751	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.751	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.751	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.752	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.752	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.752	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.752	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.752	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:07:26.753	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:08:51.292	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 79.452763}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:02.409	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:02.703	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:02.703	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.133	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:06.134	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:35.001	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:35.314	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:35.314	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.833	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.833	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.833	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.833	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.834	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:10:38.835	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:13:06.417	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:13:06.780	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:12.380	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.056	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.056	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.056	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.056	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.057	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:16.058	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:17.407	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 1.0801116}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:14:21.657	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 1.0524412}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:05.804	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.097	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.097	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.097	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.097	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.097	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.098	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.098	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.098	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.098	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:16:06.099	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:32.788	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.090	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 00:19:33.091	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:20:20.181	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 41.6984763}
+[NLY-GIN-ADMIN] 2020/12/12 - 00:21:34.065	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 69.0284321}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.253	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.600	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:26:46.601	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:22.822	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.109	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.109	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.109	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.109	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.109	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.110	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.110	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.110	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.110	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:28:23.111	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.019	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.318	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.318	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.564	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.565	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:27.567	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:34:39.125	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 5.1961073}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:35:43.586	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 55.567388}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:24.656	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:24.958	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:24.958	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.417	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.418	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.418	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.418	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.418	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:36:28.419	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:37:17.438	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 20.7079589}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:24.272	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:24.579	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:24.579	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.009	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.009	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.009	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.009	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.009	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.010	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.010	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.010	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.010	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.010	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:28.011	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:39:53.940	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 21.5616723}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:40:05.770	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 2.3417732}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:31.921	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.241	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.241	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.491	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.491	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.491	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.491	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.492	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:41:32.493	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:15.509	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:15.802	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:15.802	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.122	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.123	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.123	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.123	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.123	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:19.124	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:27.713	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.7104148}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:30.123	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.298394}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:43:36.053	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2952126}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:44:13.545	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2712767}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:44:14.613	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2845198}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:44:17.125	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2965743}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:44:18.883	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.3001996}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:44:20.193	[34minfo[0m	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.318493}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:49.638	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:50.035	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:50.035	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.578	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.578	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.578	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.578	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.579	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/12 - 23:51:53.580	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:52:02.224	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.3402363}
+[NLY-GIN-ADMIN] 2020/12/12 - 23:52:38.171	[34minfo[0m	/user/register	{"status": 200, "method": "POST", "path": "/user/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 25.2135657}

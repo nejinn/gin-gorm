@@ -1,0 +1,2 @@
+[NLY-GIN-ADMIN] 2020/11/02 - 21:04:04.884	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/11/02 - 21:04:06.844	[34minfo[0m	迁移数据库成功
