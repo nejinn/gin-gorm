@@ -1,0 +1,61 @@
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:15.544	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:15.862	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:15.863	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.327	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.327	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.328	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.328	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.328	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.328	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.329	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.329	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.329	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.329	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/14 - 22:37:19.330	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/14 - 22:45:32.009	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.3141527}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:02:48.344	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:02:48.655	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3091701}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:03:29.300	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:03:29.620	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3173733}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:03:54.357	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:03:54.666	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.306437}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:04:41.453	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:04:41.717	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2622996}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:09.042	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:09.337	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:09.337	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.762	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.762	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.762	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.763	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:12.764	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:23.477	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:23.799	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3191823}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:36.459	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:36.788	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3271283}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:55.300	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:06:55.600	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2972335}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:07:15.563	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.324415}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:09.976	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:10.289	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:10.289	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.795	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.796	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.796	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.796	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:13.797	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:16.190	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.3181581}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:23.683	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/14 - 23:08:24.009	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3242252}

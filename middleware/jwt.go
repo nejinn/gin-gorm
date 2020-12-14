@@ -84,7 +84,7 @@ func DispenseToken(c *gin.Context, user *model.User) {
 		return
 	}
 	type Date struct {
-		Token string
+		Token string `json:"token"`
 	}
 	date := Date{
 		Token: token,
