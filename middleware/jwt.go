@@ -80,7 +80,7 @@ func DispenseToken(c *gin.Context, user *model.User) {
 	}
 	token, err := j.GenToken(claims)
 	if err != nil {
-		response.ErrorMsg(c, response.TokenError.Code, err.Error())
+		response.ErrorWithCustomMsg(c, response.TokenError.Code, err.Error())
 		return
 	}
 	type Date struct {

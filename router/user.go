@@ -2,7 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	v1 "note/api/v1"
+	"note/api/v1"
+	_ "note/docs"
 )
 
 func InitUserRouers(Router *gin.RouterGroup) {

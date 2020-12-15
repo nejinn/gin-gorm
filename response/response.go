@@ -21,10 +21,6 @@ type DataResponse struct {
 
 // 请求成功返回 json
 func OkData(c *gin.Context, ret OkRet, data interface{}) {
-	//res := response{
-	//	Ret: ret,
-	//	Data: map[string]interface{}{},
-	//}
 	if data == nil {
 		c.JSON(http.StatusOK, MsgResponse{
 			Ret: ret,
@@ -40,7 +36,7 @@ func OkData(c *gin.Context, ret OkRet, data interface{}) {
 }
 
 // 自定义msg code 返回json
-func ErrorMsg(c *gin.Context, code int, msg string) {
+func ErrorWithCustomMsg(c *gin.Context, code int, msg string) {
 	c.JSON(http.StatusOK, MsgResponse{
 		Ret: OkRet{
 			Code: code,
@@ -49,7 +45,8 @@ func ErrorMsg(c *gin.Context, code int, msg string) {
 	})
 }
 
-func ErrorMsgWithJson(c *gin.Context, errJson OkRet) {
+// 返回 response_msg 中定义好的常量错误码
+func ErrorMsgWithResponseMsg(c *gin.Context, errJson OkRet) {
 	c.JSON(http.StatusOK, MsgResponse{
 		Ret: OkRet{
 			Code: errJson.Code,

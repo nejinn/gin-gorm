@@ -22,11 +22,11 @@ func GetUserList(c *gin.Context) {
 func LoginAdmin(c *gin.Context) {
 	l := view.LoginStruct{}
 	if err := c.ShouldBindJSON(&l); err != nil {
-		response.ErrorMsgWithJson(c, response.LoginError)
+		response.ErrorMsgWithResponseMsg(c, response.LoginError)
 	}
 	user := &model.User{Username: l.Username, Password: l.Password}
 	if err, userInfo := view.Login(user); err != nil {
-		response.ErrorMsg(c, response.LoginError.Code, err.Error())
+		response.ErrorWithCustomMsg(c, response.LoginError.Code, err.Error())
 	} else {
 		middleware.DispenseToken(c, userInfo)
 	}
@@ -39,7 +39,7 @@ func Register(c *gin.Context) {
 
 	err := view.Register(&r)
 	if err != nil {
-		response.ErrorMsg(c, response.LoginError.Code, err.Error())
+		response.ErrorWithCustomMsg(c, response.RegisterError.Code, err.Error())
 	} else {
 		response.OkData(c, response.Ok, global.NLY_NIL_RES)
 	}
@@ -53,7 +53,7 @@ func UploadImg(c *gin.Context) {
 	fildDir := fmt.Sprintf("%s/%d/%s/", global.NLY_CONFIG.Static.Path, time.Now().Year(), time.Now().Month().String())
 	err = utils.CreateDir(fildDir)
 	if err != nil {
-		response.ErrorMsg(c, 200003, err.Error())
+		response.ErrorWithCustomMsg(c, 200003, err.Error())
 	}
 	filepath := fmt.Sprintf("%s%s%s", fildDir, fileName, ".png")
 
