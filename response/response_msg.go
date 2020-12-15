@@ -7,7 +7,7 @@ var Ok = OkRet{
 
 var TokenError = OkRet{
 	Code: 100002,
-	Msg:  "token错误",
+	Msg:  "token不能为空",
 }
 
 var RegisterError = OkRet{
@@ -15,12 +15,22 @@ var RegisterError = OkRet{
 	Msg:  "用户注册错误",
 }
 
+var CreateAvatarError = OkRet{
+	Code: 200003,
+	Msg:  "创建默认头像失败",
+}
+
 var LoginError = OkRet{
 	Code: 200004,
 	Msg:  "登录信息错误",
 }
 
-var CreateAvatarError = OkRet{
-	Code: 200003,
-	Msg:  "创建默认头像失败",
+var CreateNavError = OkRet{
+	Code: 200005,
+	Msg:  "创建导航错误",
 }
+
+//var JwtError = OkRet{
+//	Code: 200006,
+//	Msg:  "token不能为空",
+//}

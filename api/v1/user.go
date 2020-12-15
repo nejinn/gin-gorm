@@ -23,6 +23,7 @@ func LoginAdmin(c *gin.Context) {
 	l := view.LoginStruct{}
 	if err := c.ShouldBindJSON(&l); err != nil {
 		response.ErrorMsgWithResponseMsg(c, response.LoginError)
+		return
 	}
 	user := &model.User{Username: l.Username, Password: l.Password}
 	if err, userInfo := view.Login(user); err != nil {
