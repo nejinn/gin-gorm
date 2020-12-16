@@ -16,6 +16,14 @@ type JWT struct {
 	SignKey []byte
 }
 
+// 获取传入token只有user数据
+func GetJwtUser(c *gin.Context) (res model.User) {
+	user, _ := c.Get("user")
+	userInfo := user.(model.User)
+	return userInfo
+}
+
+// token验证中间件
 func JWTAuthMiddleware() func(c *gin.Context) {
 	return func(c *gin.Context) {
 		// 客户端携带Token有三种方式 1.放在请求头 2.放在请求体 3.放在URI
@@ -29,15 +37,16 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		}
 		// 按空格分割
 		parts := strings.SplitN(authHeader, " ", 2)
-		if !(len(parts) == 2 && parts[0] == "nejinn") {
+		if !(len(parts) == 2 && parts[0] == global.NLY_CONFIG.Jwt.TokenPrefix) {
 			response.ErrorWithCustomMsg(c, response.TokenError.Code, "token错误")
 			c.Abort()
 			return
 		}
-		// parts[1]是获取到的tokenString，我们使用之前定义好的解析JWT的函数来解析它
+		// 这个步骤一定要有
 		j := &JWT{
 			SignKey: []byte(global.NLY_CONFIG.Jwt.SignKey),
 		}
+		// parts[1]是获取到的tokenString，我们使用之前定义好的解析JWT的函数来解析它
 		claims, err := j.ParseToken(parts[1])
 		if err != nil {
 			response.ErrorWithCustomMsg(c, response.TokenError.Code, err.Error())
@@ -113,7 +122,7 @@ func DispenseToken(c *gin.Context, user *model.User) {
 		StandardClaims: jwt.StandardClaims{
 			NotBefore: time.Now().Unix() - 5000,
 			ExpiresAt: time.Now().Unix() + int64(expiresNum),
-			Issuer:    "nejinn",
+			Issuer:    global.NLY_CONFIG.Jwt.TokenPrefix,
 		},
 	}
 	token, err := j.GenToken(claims)

@@ -6,7 +6,7 @@ import (
 
 // 构造 用户 model
 type User struct {
-	ID                uint      `json:"id" gorm:"primary_key"`
+	ID                int       `json:"id" gorm:"primary_key"`
 	Username          string    `json:"username" gorm:"column:username"`
 	Password          string    `json:"password" gorm:"column:password"`
 	UserPic           string    `json:"user_pic" gorm:"column:user_pic"`

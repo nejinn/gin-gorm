@@ -6,10 +6,10 @@ import (
 )
 
 func InitNavRouers(Router *gin.RouterGroup) {
-	UserRouter := Router.Group("nav")
+	NavRouter := Router.Group("nav")
 	{
-		UserRouter.POST("create", v1.CreateUserNav)
-
+		NavRouter.POST("create", v1.CreateNav)
+		NavRouter.GET("list", v1.GetNavList)
 	}
 
 }

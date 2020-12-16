@@ -30,6 +30,11 @@ var CreateNavError = OkRet{
 	Msg:  "创建导航错误",
 }
 
+var GetNavListError = OkRet{
+	Code: 200006,
+	Msg:  "获取导航列表错误",
+}
+
 //var JwtError = OkRet{
 //	Code: 200006,
 //	Msg:  "token不能为空",

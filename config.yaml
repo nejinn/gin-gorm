@@ -29,6 +29,7 @@ jwt:
   sign-key: 'nlyadminltevue'
   token-expire-time: 6
   expire-time-unit: 'hour' # 过期时间单位 day, hour, minute, second
+  token-prefix: 'nejinn'
 
 static:
   path: 'static'
