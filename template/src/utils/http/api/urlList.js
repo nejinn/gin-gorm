@@ -2,5 +2,5 @@ const ApiBaseUrl = "/api/v1/";
 
 export default {
   getLoginUrl: `${ApiBaseUrl}user/login`,
-  getUserInfo: `${ApiBaseUrl}setting/user-info/`
+  getUserInfo: `${ApiBaseUrl}user`
 };

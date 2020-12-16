@@ -2,7 +2,7 @@ package model
 
 import "time"
 
-type UserNav struct {
+type Nav struct {
 	ID          int       `json:"id" gorm:"primary_key"`
 	Name        string    `json:"name" gorm:"column:name"`                        // 导航名称
 	Icon        string    `json:"icon" gorm:"column:icon;default:null"`           // 导航icon

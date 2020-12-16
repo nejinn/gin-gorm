@@ -46,6 +46,51 @@ func Register(c *gin.Context) {
 	}
 }
 
+// 用户信息
+func GetUserInfo(c *gin.Context) {
+	var navList []model.Nav
+	res, err := view.GetNavList(navList)
+	user := middleware.GetJwtUser(c)
+	user.UserPic = fmt.Sprintf("%s%s/%s", "http://",c.Request.Host, user.UserPic)
+	if err != nil {
+		response.ErrorMsgWithResponseMsg(c, response.GetNavListError)
+		return
+	}
+	var navListTree []*utils.NavListJson
+	for _, item := range res {
+		navListItem := utils.NavListJson{
+			Id:       item.ID,
+			Name:     item.Name,
+			Icon:     item.Icon,
+			ParentId: item.ParentId,
+			Exact:    true,
+		}
+		if item.Type == 1 {
+			navListItem.NavType = "nly-sidebar-nav-item"
+			navListItem.Router = item.Router
+		} else if item.Type == 2 {
+			navListItem.NavType = "nly-sidebar-nav-tree"
+			navListItem.Target = fmt.Sprintf("%d", navListItem.Id)
+		} else {
+			navListItem.NavType = "nly-sidebar-nav-header"
+		}
+		navListTree = append(navListTree, &navListItem)
+	}
+
+	nav := utils.NavListTree(navListTree)
+
+	type result struct {
+		User    model.User           `json:"user_info"`
+		UserNav []*utils.NavListJson `json:"user_sidebar"`
+	}
+	userInfo := result{
+		User:    user,
+		UserNav: nav,
+	}
+	response.OkData(c, response.Ok, userInfo)
+
+}
+
 // 上传图片测试
 func UploadImg(c *gin.Context) {
 	f, err := c.FormFile("img")

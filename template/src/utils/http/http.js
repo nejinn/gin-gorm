@@ -12,7 +12,7 @@ axios.defaults.baseURL = "http://localhost:8888/";
 axios.interceptors.request.use(
   config => {
     if (store.state.login.loginToken) {
-      config.headers.Authorization = `nly ${store.getters.getLoginToken}`;
+      config.headers.Authorization = `nejinn ${store.getters.getLoginToken}`;
     }
     // if (Object.prototype.toString.call(config.data) != "[object FormData]") {
     //   if (config.method == "post") {

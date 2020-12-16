@@ -36,6 +36,7 @@ func Routers() *gin.Engine {
 	PrivateApiGroup.Use(middleware.JWTAuthMiddleware())
 	{
 		router.InitNavRouers(PrivateApiGroup)
+		router.InitProviderUserRouers(PrivateApiGroup)
 	}
 	global.NLY_LOG.Info("全部路由注册成功")
 	return Router

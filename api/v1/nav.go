@@ -6,12 +6,13 @@ import (
 	"note/middleware"
 	"note/model"
 	"note/response"
+	"note/utils"
 	"note/view"
 )
 
 // 创建导航
 func CreateNav(c *gin.Context) {
-	l := model.UserNav{}
+	l := model.Nav{}
 	user := middleware.GetJwtUser(c)
 	l.CreateId = user.ID
 	if err := c.ShouldBindJSON(&l); err != nil {
@@ -25,46 +26,36 @@ func CreateNav(c *gin.Context) {
 	}
 }
 
-type navListJson struct {
-	Id          int    `json:"id"`
-	Name        string `json:"_name" `
-	Icon        string `json:"icon"`
-	ParentId    int    `json:"parent_id" `
-	Router      string `json:"router"`
-	Order       int    `json:"order"`
-	Children *[]navListJson `json:"children"`
-}
-
 // 获取导航栏
 func GetNavList(c *gin.Context) {
-	var navList []model.UserNav
+	var navList []model.Nav
 	res, err := view.GetNavList(navList)
 
 	if err != nil {
 		response.ErrorMsgWithResponseMsg(c, response.GetNavListError)
 		return
 	}
-	response.OkData(c, response.Ok, res)
-}
-
-func zzz(res []model.UserNav) (re []navListJson) {
-	var jsonRes []navListJson
-	for i := 0; i < len(res); i++ {
-		var item = res[i]
-		if item.ParentId == null {
-
-			jsonRes = append(jsonRes, navListJson{
-				Id:       item.ID,
-				Name:     item.Name,
-				Icon:     item.Icon,
-				ParentId: 0,
-				Router:   item.Router,
-				Order:    item.Order,
-			})
-		}else{
-
+	var navListTree []*utils.NavListJson
+	for _, item := range res {
+		navListItem := utils.NavListJson{
+			Id:       item.ID,
+			Name:     item.Name,
+			Icon:     item.Icon,
+			ParentId: item.ParentId,
+			Exact:    true,
 		}
+		if item.Type == 1 {
+			navListItem.NavType = "nly-sidebar-nav-item"
+			navListItem.Router = item.Router
+		} else if item.Type == 2 {
+			navListItem.NavType = "nly-sidebar-nav-tree"
+		} else {
+			navListItem.NavType = "nly-sidebar-nav-header"
+		}
+		navListTree = append(navListTree, &navListItem)
 	}
 
-	return jsonRes
+	result := utils.NavListTree(navListTree)
+
+	response.OkData(c, response.Ok, result)
 }

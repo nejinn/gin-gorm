@@ -6,13 +6,13 @@ import (
 	"note/model"
 )
 
-func CreateNav(e *model.UserNav) (err error) {
+func CreateNav(e *model.Nav) (err error) {
 	if e.Name == "" {
 		return errors.New("导航菜单不能为空")
 	}
 	// icon 默认为 oi oi-list-rich
 	if e.Icon == "" {
-		e.Icon = "oi oi-list-rich"
+		e.Icon = "nav-icon fas oi oi-list-rich"
 	}
 	if e.Order == 0 {
 		return errors.New("排序应该大于等于1")
@@ -22,7 +22,7 @@ func CreateNav(e *model.UserNav) (err error) {
 	return err
 }
 
-func GetNavList(e []model.UserNav) (res []model.UserNav, err error) {
+func GetNavList(e []model.Nav) (res []model.Nav, err error) {
 	err = global.NLY_DB.Find(&e).Error
 	return e, err
 }
