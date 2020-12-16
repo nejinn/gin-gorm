@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb4cf02d-7418-40a0-8e2e-6a4c269ab8ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/nav.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/v1/nav.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/nav.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/jwt.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/nav.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/nav.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/response/response_msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/response/response_msg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/nav.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/nav.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user-nav.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

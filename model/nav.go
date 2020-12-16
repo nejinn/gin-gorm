@@ -9,6 +9,7 @@ type UserNav struct {
 	ParentId    int       `json:"parent_id" gorm:"column:parent_id;default:null"` // 父级菜单id
 	Router      string    `json:"router" gorm:"column:router;default:null"`       // 路由
 	Order       int       `json:"order" gorm:"column:order;default:null"`         // 排序
+	Type        int       `json:"type" gorm:"column:type;default:1"`              // 类型 1 nly-sidebar-nav-item 2 nly-sidebar-nav-tree 3 nly-sidebar-nav-header
 	CreatedAt   time.Time `json:"create_date" gorm:"column:create_date"`
 	UpdatedAt   time.Time `json:"update_date" gorm:"column:update_date"`
 	DeletedTime time.Time `json:"deleted_date" gorm:"column:deleted_date;default:null"`
