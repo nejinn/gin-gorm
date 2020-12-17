@@ -1,0 +1,353 @@
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:45.460	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:45.734	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:45.735	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:49.035	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.254	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.254	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.255	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.255	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.255	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.255	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.256	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.256	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.256	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.256	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 21:32:51.257	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:33:00.800	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:33:00.804	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009982}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:44:07.534	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:44:07.537	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009971}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:44:38.222	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:44:38.224	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:45:16.559	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:45:16.562	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:46:13.910	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:46:13.913	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009974}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:46:42.104	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:46:42.107	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:48:38.053	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:48:38.055	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:48:51.225	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:48:51.230	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009866}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:01.127	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:01.131	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009948}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:07.405	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0010157}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:07.737	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3311084}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:07.753	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:07.998	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2426939}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:08.094	[34minfo[0m	/static/avatar/admin/default_avatar.png	{"status": 304, "method": "GET", "path": "/static/avatar/admin/default_avatar.png", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0099733}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:18.053	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:49:18.297	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2423859}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:20.955	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:20.959	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:40.428	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:40.708	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2782657}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:40.758	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:41.028	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.266287}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:53.585	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:50:53.588	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:09.980	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:10.258	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2763007}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:10.317	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:10.559	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.240414}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:17.837	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:51:17.839	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:40.228	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:40.543	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3132405}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:40.590	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:40.840	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2466176}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:52.212	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:52:52.215	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009981}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:22.164	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:22.471	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3051847}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:22.536	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:22.782	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2423544}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:31.780	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 21:54:31.785	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:22.531	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:22.857	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3241318}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:27.737	[34minfo[0m	/api/v1/user/login	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:28.058	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.3201797}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:28.418	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:11:28.633	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2127567}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:13.255	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:13.559	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:13.559	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:16.983	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.233	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.234	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.234	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.234	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.234	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:19.235	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:23.514	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:23.810	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2932159}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:46.987	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:47.300	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:47.300	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:50.809	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.190	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.191	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.191	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.191	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.191	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:53.192	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:57.068	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:14:57.321	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.249365}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:04.176	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:04.490	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:04.491	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:07.777	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.641	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.641	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.641	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.641	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.642	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:09.643	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:23.151	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:16:23.391	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2374072}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:16.524	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:16.839	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:16.839	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:20.442	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.632	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.632	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.632	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.633	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.634	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.661	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:22.662	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:27.793	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 5.129321}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:17:30.775	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 3.059846}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:07.643	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:07.943	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:07.943	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:11.558	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.986	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.987	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.987	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.987	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.987	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.987	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.988	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.988	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.988	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.988	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:13.989	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:30.934	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:18:34.871	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 3.9344792}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:19:23.130	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:22:03.990	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 160.8578211}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:22:13.870	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:22:18.839	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 4.9667162}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:42.059	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:42.331	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:42.331	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:45.940	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.348	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.348	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.348	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.348	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.349	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 22:24:48.350	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:25:02.611	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:25:02.869	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2553159}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:26:55.349	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:26:55.560	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.205449}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:28:04.841	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:28:05.080	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2363715}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:32:16.727	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:32:16.953	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2243914}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:01.277	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:01.548	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2693117}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:07.430	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:07.653	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2204093}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:14.829	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:15.079	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2463088}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:51.949	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:36:52.206	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2553156}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:37:19.358	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:37:19.587	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2264294}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:38:06.745	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:38:06.968	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2214065}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:40:23.600	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:40:23.808	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2054471}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:40:32.173	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:40:32.459	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2842414}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:41:02.883	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:41:03.110	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2243999}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:42:03.661	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:42:03.936	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2712725}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:10.226	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:10.452	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2234019}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:13.532	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2473372}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:36.560	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:36.783	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2214105}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:44:39.272	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2463409}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:45:05.351	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:45:05.594	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2413525}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:53:53.762	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 22:53:54.001	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2283903}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:42.909	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:43.130	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:43.130	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:46.230	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.480	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.480	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.480	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.480	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.480	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.481	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.481	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.481	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.481	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.481	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.482	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.626	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:48.871	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2423863}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:54.086	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:07:54.340	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2433473}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:32.015	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:32.166	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:32.167	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:33.672	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.830	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.830	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.830	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.830	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.830	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.831	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.831	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.831	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.831	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.831	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:34.832	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:41.840	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:08:41.951	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.1067136}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:09:09.489	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:09:16.421	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.3004833}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:13:00.424	[34minfo[0m	/api/v1/user/login	{"status": 200, "method": "POST", "path": "/api/v1/user/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2745617}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:13:35.434	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 17.2618358}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:13:41.653	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 2.779566}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:14.734	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:15.067	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:15.067	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:18.768	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.288	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.288	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.288	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.288	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.289	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.290	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:18:21.798	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2285019}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:29.617	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:29.918	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:29.918	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:33.328	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.618	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:30:35.619	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:22.764	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:23.078	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:23.078	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:26.491	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.728	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.729	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.729	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.729	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.729	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:28.730	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:29.420	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2473398}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:38.238	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:31:38.469	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2284892}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:28.672	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:28.957	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:28.957	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:32.164	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.303	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.303	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.303	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.303	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.304	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:34.305	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:42.312	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0010055}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:42.445	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.129653}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:37:58.074	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.1685848}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:38:45.946	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2084589}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:51.653	[34minfo[0m	开始初始化数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:51.955	[34minfo[0m	postgres启动成功: 	{"hostname": "host=120.25.237.88 port=5432 user=nly dbname=nly_test_2 password=nlyadminlte sslmode=disable"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:51.955	[34minfo[0m	开始迁移数据库
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:55.375	[34minfo[0m	迁移表 User 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.675	[34minfo[0m	迁移表 Nav 成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.675	[34minfo[0m	迁移数据库成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.675	[34minfo[0m	开始初始化路由设置
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	使用 Zap 自定义 Logger 和 Recovery 
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	注册静态文件目录:	{"dir": "static"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	注册跨域中间件
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	register swagger handler
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	开始注册路由
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	全部路由注册成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.676	[34minfo[0m	路由初始化成功
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:57.677	[34minfo[0m	server run success on 	{"address": ":8888"}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:39:59.957	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:40:00.216	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2563124}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:40:04.580	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2095138}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:41:36.849	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:41:37.056	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2054486}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:54:40.890	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.0009889}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:54:41.116	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.222404}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:54:42.737	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.1894923}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:57:38.919	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:57:39.158	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.2363682}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:57:49.038	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.26.8", "errors": "", "cost": 0.2343783}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:59:20.222	[34minfo[0m	/api/v1/user	{"status": 204, "method": "OPTIONS", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0}
+[NLY-GIN-ADMIN] 2020/12/17 - 23:59:20.419	[34minfo[0m	/api/v1/user	{"status": 200, "method": "GET", "path": "/api/v1/user", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36", "errors": "", "cost": 0.1935245}
