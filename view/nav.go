@@ -23,6 +23,6 @@ func CreateNav(e *model.Nav) (err error) {
 }
 
 func GetNavList(e []model.Nav) (res []model.Nav, err error) {
-	err = global.NLY_DB.Find(&e).Error
+	err = global.NLY_DB.Order("order").Order("create_date").Find(&e).Error
 	return e, err
 }

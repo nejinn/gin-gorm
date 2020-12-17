@@ -1,8 +1,8 @@
 <template>
   <nly-sidebar-menu
     :sidebarList="sidebarList"
-    side-mini
     exact
+    side-mini
     container-hover
     brand-to="/"
     :brand-img-src="logo"
@@ -31,14 +31,17 @@ export default {
   },
   computed: {
     sidebarList() {
+      console.log(this.$route.path == "/user/list");
       const sidebarVnode = [
         {
           _type: "nly-sidebar-nav",
           _key: 0,
+          // flat: true,
           dataGroup: "one",
+          compact: true,
+          size: "sm",
           exact: true,
           _children: this.sidebar,
-          childIndent: true,
           sidebarNavClass: "mt-2"
         }
       ];

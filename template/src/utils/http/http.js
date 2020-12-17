@@ -290,6 +290,15 @@ export default {
     const codeArray = [400, 403, 408, 500, 501, 502, 503, 504, 505, 600];
     const { code, msg } = ret;
 
+    if (code == 100002) {
+      obj.$router.replace({
+        path: "/login",
+        query: { redirect: router.currentRoute.fullPath }
+      });
+      store.commit("clearLoginUserInfo");
+      return true;
+    }
+
     if (codeArray.indexOf(code) === -1) {
       const toastVnode = {
         title: "操作失败",
@@ -298,19 +307,12 @@ export default {
         variant: "danger"
       };
       obj.$toast(obj, toastVnode);
-      return;
+      return true;
     }
 
     if (code === 401 || code === 404 || code === 500 || code === 503) {
-      return;
+      return true;
     }
-    const toastVnode = {
-      title: "服务错误",
-      message: msg,
-      content: code,
-      variant: "info"
-    };
-    obj.$toast(obj, toastVnode);
-    return;
+    return false;
   }
 };

@@ -51,7 +51,7 @@ func GetUserInfo(c *gin.Context) {
 	var navList []model.Nav
 	res, err := view.GetNavList(navList)
 	user := middleware.GetJwtUser(c)
-	user.UserPic = fmt.Sprintf("%s%s/%s", "http://",c.Request.Host, user.UserPic)
+	user.UserPic = fmt.Sprintf("%s%s/%s", "http://", c.Request.Host, user.UserPic)
 	if err != nil {
 		response.ErrorMsgWithResponseMsg(c, response.GetNavListError)
 		return
@@ -60,7 +60,6 @@ func GetUserInfo(c *gin.Context) {
 	for _, item := range res {
 		navListItem := utils.NavListJson{
 			Id:       item.ID,
-			Name:     item.Name,
 			Icon:     item.Icon,
 			ParentId: item.ParentId,
 			Exact:    true,
@@ -68,11 +67,14 @@ func GetUserInfo(c *gin.Context) {
 		if item.Type == 1 {
 			navListItem.NavType = "nly-sidebar-nav-item"
 			navListItem.Router = item.Router
+			navListItem.Name = item.Name
 		} else if item.Type == 2 {
 			navListItem.NavType = "nly-sidebar-nav-tree"
 			navListItem.Target = fmt.Sprintf("%d", navListItem.Id)
+			navListItem.Text = item.Name
 		} else {
 			navListItem.NavType = "nly-sidebar-nav-header"
+			navListItem.Text = item.Name
 		}
 		navListTree = append(navListTree, &navListItem)
 	}

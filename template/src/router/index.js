@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 const Login = () => import("../views/Login/Login.vue");
 const TheContainer = () => import("../views/Layout/TheContainer.vue");
 const Home = () => import("../views/Home/Home.vue");
+const UserList = () => import("../views/User/UserList.vue");
 
 Vue.use(VueRouter);
 
@@ -19,7 +20,7 @@ const routes = [
     redirect: "/dashboard",
     meta: {
       login: true,
-      title: "首页"
+      title: "仪表盘"
     },
     children: [
       {
@@ -30,6 +31,31 @@ const routes = [
           title: "仪表盘",
           login: true
         }
+      },
+      {
+        path: "user",
+        name: "User",
+        redirect: "/user/list",
+        component: {
+          render(c) {
+            return c("router-view");
+          }
+        },
+        meta: {
+          title: "权限与用户",
+          login: true
+        },
+        children: [
+          {
+            path: "list",
+            name: "UserList",
+            component: UserList,
+            meta: {
+              title: "用户列表",
+              login: true
+            }
+          }
+        ]
       }
     ]
   }

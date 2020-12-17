@@ -8,6 +8,7 @@ type NavListJson struct {
 	Id       int            `json:"_key"`
 	Name     string         `json:"_name"`
 	NavType  string         `json:"_type"`
+	Text     string         `json:"text"`
 	Icon     string         `json:"icon"`
 	ParentId int            `json:"dataGroup" `
 	Router   string         `json:"to"`
