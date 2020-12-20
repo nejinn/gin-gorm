@@ -1,20 +1,22 @@
 <template>
   <nly-content-wrapper>
-    <nly-content-header>
-      <nly-container fluid>
-        <nly-row row-class="mb-2">
-          <nly-col sm="6">
-            <h1 class="m-0 text-dark">{{ breadcrumbArray.currentName }}</h1>
-          </nly-col>
-          <nly-col sm="6">
-            <nly-breadcrumb
-              :item="breadcrumbArray.breadcrumbItems"
-              breadcrumb-class="float-sm-right"
-            />
-          </nly-col>
-        </nly-row>
-      </nly-container>
-    </nly-content-header>
+    <nly-card class="m-3" header-outline header-variant="secondary">
+      <nly-content-header>
+        <nly-container fluid>
+          <nly-row row-class="mb-2">
+            <nly-col sm="6">
+              <h1 class="m-0 text-dark">{{ breadcrumbArray.currentName }}</h1>
+            </nly-col>
+            <nly-col sm="6">
+              <nly-breadcrumb
+                :item="breadcrumbArray.breadcrumbItems"
+                breadcrumb-class="float-sm-right"
+              />
+            </nly-col>
+          </nly-row>
+        </nly-container>
+      </nly-content-header>
+    </nly-card>
     <nly-content>
       <nly-row>
         <nly-col>

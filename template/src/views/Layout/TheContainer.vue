@@ -4,6 +4,7 @@
     <the-sidebar v-if="userSidebar" :sidebar="userSidebar" />
     <the-main v-if="userInfo" />
     <the-footer v-if="userInfo" />
+    <nly-overlay sidebar v-nly-sidebar-collapse.overlay />
   </nly-wrapper>
 </template>
 

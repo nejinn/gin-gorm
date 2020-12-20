@@ -14,9 +14,14 @@ import (
 )
 
 func GetUserList(c *gin.Context) {
-	var user []model.User
-	global.NLY_DB.Find(&user)
-	response.OkData(c, response.Ok, user)
+	l := utils.PageInfo{}
+	_ = c.ShouldBindJSON(&l)
+	err, data := view.UserList(&l, c)
+	if err != nil {
+		response.ErrorWithCustomMsg(c, response.GetUserListError.Code, err.Error())
+		return
+	}
+	response.OkData(c, response.Ok, data)
 }
 
 func LoginAdmin(c *gin.Context) {

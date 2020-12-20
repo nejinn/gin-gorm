@@ -17,9 +17,10 @@ func InitUserRouers(Router *gin.RouterGroup) {
 }
 
 func InitProviderUserRouers(Router *gin.RouterGroup) {
-	UserRouter := Router.Group("user")
+	ProviderUserRouter := Router.Group("user")
 	{
-		UserRouter.GET("", v1.GetUserInfo)
+		ProviderUserRouter.GET("", v1.GetUserInfo)
+		ProviderUserRouter.GET("list",v1.GetUserList)
 	}
 
 }

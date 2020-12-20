@@ -31,7 +31,6 @@ export default {
   },
   computed: {
     sidebarList() {
-      console.log(this.$route.path == "/user/list");
       const sidebarVnode = [
         {
           _type: "nly-sidebar-nav",

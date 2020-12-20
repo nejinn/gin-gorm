@@ -11,7 +11,11 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    component: Login
+    component: Login,
+    meta: {
+      login: false,
+      title: "登录"
+    }
   },
   {
     path: "/",

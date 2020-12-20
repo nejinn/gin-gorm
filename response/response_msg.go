@@ -35,6 +35,11 @@ var GetNavListError = OkRet{
 	Msg:  "获取导航列表错误",
 }
 
+var GetUserListError = OkRet{
+	Code: 200007,
+	Msg: "获取用户列表错误",
+}
+
 //var JwtError = OkRet{
 //	Code: 200006,
 //	Msg:  "token不能为空",
