@@ -20,7 +20,9 @@ func InitProviderUserRouers(Router *gin.RouterGroup) {
 	ProviderUserRouter := Router.Group("user")
 	{
 		ProviderUserRouter.GET("", v1.GetUserInfo)
-		ProviderUserRouter.GET("list",v1.GetUserList)
+		ProviderUserRouter.GET("list", v1.GetUserList)
+		ProviderUserRouter.POST("/check_username", v1.CheckUsernameExist)
+		ProviderUserRouter.POST("/add_user", v1.AddUser)
 	}
 
 }

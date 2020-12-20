@@ -120,3 +120,22 @@ func UploadImg(c *gin.Context) {
 	}
 	response.OkData(c, response.Ok, data)
 }
+
+// 检验用户名是否存在
+func CheckUsernameExist(c *gin.Context) {
+	u := view.CheckUsername{}
+	_ = c.ShouldBindJSON(&u)
+	res := view.CheckUsernameExist(&u)
+	response.OkData(c, response.Ok, res)
+}
+
+// 新增用户
+func AddUser(c *gin.Context) {
+	a := view.AddUserInfo{}
+	if err := c.ShouldBindJSON(&a); err != nil {
+		response.ErrorMsgWithResponseMsg(c, response.AddUserError)
+		return
+	}
+	_ = view.AddUser(&a)
+
+}

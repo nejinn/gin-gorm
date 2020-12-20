@@ -549,355 +549,357 @@
       />
 
       <nly-modal v-model="editorModal" centered hide-header size="lg">
-        <nly-container fluid>
-          <nly-row>
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户名"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-username"
-                class="mb-0"
-                :invalid-feedback="feedback.usernameInvalid"
-                :valid="valid.usernameState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="editor.username"
-                  type="text"
-                  id="editor-username"
+        <nly-card>
+          <nly-card-body>
+            <nly-row>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户名"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-username"
+                  class="mb-0"
+                  :invalid-feedback="feedback.usernameInvalid"
                   :valid="valid.usernameState"
-                  @blur="blurUsernameEditor"
-                  @input="changeUsernameEditor"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户类型"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-usertype"
-                class="mb-0"
-              >
-                <nly-form-select
-                  v-model="editor.user_type"
-                  :options="usertypeOptions"
-                  id="editor-usertype"
-                  size="sm"
                 >
-                </nly-form-select>
-              </nly-form-group>
-            </nly-col>
+                  <nly-form-input
+                    size="sm"
+                    v-model="editor.username"
+                    type="text"
+                    id="editor-username"
+                    :valid="valid.usernameState"
+                    @blur="blurUsernameEditor"
+                    @input="changeUsernameEditor"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="手机号"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_phone"
-                class="mb-0"
-                :invalid-feedback="feedback.phoneInvalid"
-                :valid="valid.phoneState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="editor.user_phone"
-                  type="tel"
-                  id="editor-user_phone"
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户类型"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-usertype"
+                  class="mb-0"
+                >
+                  <nly-form-select
+                    v-model="editor.user_type"
+                    :options="usertypeOptions"
+                    id="editor-usertype"
+                    size="sm"
+                  >
+                  </nly-form-select>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="手机号"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_phone"
+                  class="mb-0"
+                  :invalid-feedback="feedback.phoneInvalid"
                   :valid="valid.phoneState"
-                  @blur="blurPhoneEditor"
-                  trim
-                  :maxlength="11"
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="邮箱"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_email"
-                class="mb-0"
-                :invalid-feedback="feedback.emailInvalid"
-                :valid="valid.emailState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="editor.user_email"
-                  type="email"
-                  id="editor-user_email"
-                  :valid="valid.emailState"
-                  @blur="blurEmailEditor"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户等级"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_level"
-                class="mb-0"
-                :invalid-feedback="feedback.levelInvalid"
-                :valid="valid.levelState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="editor.user_level"
-                  type="number"
-                  id="editor-user_level"
-                  :valid="valid.levelState"
-                  @blur="blurLevelEditor"
-                  :formatter="formatter"
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户经验值"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_exp"
-                class="mb-0"
-                :invalid-feedback="feedback.expInvalid"
-                :valid="valid.expState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="editor.user_exp"
-                  type="number"
-                  id="editor-user_exp"
-                  :valid="valid.expState"
-                  @blur="blurExpEditor"
-                  :formatter="formatter"
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="最近登录时间"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_last_login_time"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.user_last_login_time"
-                  type="number"
-                  id="editor-user_last_login_time"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户生日"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_exp"
-                class="mb-0"
-              >
-                <nly-form-daterangepicker
-                  :value="selectUserBirthday"
-                  single-date-picker
-                  :locale-data="birthDayLocaleData"
-                  @update="userBirthdayUpdate"
-                  size="sm"
-                  show-dropdowns
-                  :ranges="false"
-                  always-show-calendars
-                  auto-apply
                 >
-                  <template v-slot:append>
-                    <nly-input-group-text>
-                      <nly-icon icon="nlyfont nly-icon-time" />
-                    </nly-input-group-text>
-                  </template>
-                </nly-form-daterangepicker>
-              </nly-form-group>
-            </nly-col>
+                  <nly-form-input
+                    size="sm"
+                    v-model="editor.user_phone"
+                    type="tel"
+                    id="editor-user_phone"
+                    :valid="valid.phoneState"
+                    @blur="blurPhoneEditor"
+                    trim
+                    :maxlength="11"
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="性别"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_gender"
-                class="mb-0"
-              >
-                <nly-form-select
-                  size="sm"
-                  v-model="editor.user_gender"
-                  :options="[
-                    { value: null, text: '请选择', disabled: true },
-                    { value: 1, text: '男' },
-                    { value: 2, text: '女' }
-                  ]"
-                  id="editor-user_gender"
-                  trim
-                ></nly-form-select>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="邮箱"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_email"
+                  class="mb-0"
+                  :invalid-feedback="feedback.emailInvalid"
+                  :valid="valid.emailState"
+                >
+                  <nly-form-input
+                    size="sm"
+                    v-model="editor.user_email"
+                    type="email"
+                    id="editor-user_email"
+                    :valid="valid.emailState"
+                    @blur="blurEmailEditor"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="注册ip"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_ip"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.user_ip"
-                  id="editor-user_ip"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户等级"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_level"
+                  class="mb-0"
+                  :invalid-feedback="feedback.levelInvalid"
+                  :valid="valid.levelState"
+                >
+                  <nly-form-input
+                    size="sm"
+                    v-model="editor.user_level"
+                    type="number"
+                    id="editor-user_level"
+                    :valid="valid.levelState"
+                    @blur="blurLevelEditor"
+                    :formatter="formatter"
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="最近登录ip"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-user_last_login_ip"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.user_last_login_ip"
-                  id="editor-user_last_login_ip"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户经验值"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_exp"
+                  class="mb-0"
+                  :invalid-feedback="feedback.expInvalid"
+                  :valid="valid.expState"
+                >
+                  <nly-form-input
+                    size="sm"
+                    v-model="editor.user_exp"
+                    type="number"
+                    id="editor-user_exp"
+                    :valid="valid.expState"
+                    @blur="blurExpEditor"
+                    :formatter="formatter"
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="创建时间"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-create_date"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.create_date"
-                  id="editor-create_date"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="最近登录时间"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_last_login_time"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.user_last_login_time"
+                    type="number"
+                    id="editor-user_last_login_time"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="更新时间"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-update_date"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.update_date"
-                  id="editor-update_date"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户生日"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_exp"
+                  class="mb-0"
+                >
+                  <nly-form-daterangepicker
+                    :value="selectUserBirthday"
+                    single-date-picker
+                    :locale-data="birthDayLocaleData"
+                    @update="userBirthdayUpdate"
+                    size="sm"
+                    show-dropdowns
+                    :ranges="false"
+                    always-show-calendars
+                    auto-apply
+                  >
+                    <template v-slot:append>
+                      <nly-input-group-text>
+                        <nly-icon icon="nlyfont nly-icon-time" />
+                      </nly-input-group-text>
+                    </template>
+                  </nly-form-daterangepicker>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="是否停用"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-is_delete"
-                class="mb-0"
-              >
-                <nly-form-select
-                  disabled
-                  size="sm"
-                  v-model="editor.is_delete"
-                  :options="[
-                    { value: null, text: '请选择', disabled: true },
-                    { value: false, text: '否' },
-                    { value: true, text: '是' }
-                  ]"
-                  id="editor-is_delete"
-                  trim
-                ></nly-form-select>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="性别"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_gender"
+                  class="mb-0"
+                >
+                  <nly-form-select
+                    size="sm"
+                    v-model="editor.user_gender"
+                    :options="[
+                      { value: null, text: '请选择', disabled: true },
+                      { value: 1, text: '男' },
+                      { value: 2, text: '女' }
+                    ]"
+                    id="editor-user_gender"
+                    trim
+                  ></nly-form-select>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="更新人"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-create_user"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.create_user"
-                  id="editor-create_user"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="注册ip"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_ip"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.user_ip"
+                    id="editor-user_ip"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="更新人"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="editor-update_user"
-                class="mb-0"
-              >
-                <nly-form-input
-                  disabled
-                  size="sm"
-                  :value="editor.update_user"
-                  id="editor-update_user"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-          </nly-row>
-        </nly-container>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="最近登录ip"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-user_last_login_ip"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.user_last_login_ip"
+                    id="editor-user_last_login_ip"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="创建时间"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-create_date"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.create_date"
+                    id="editor-create_date"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="更新时间"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-update_date"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.update_date"
+                    id="editor-update_date"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="是否停用"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-is_delete"
+                  class="mb-0"
+                >
+                  <nly-form-select
+                    disabled
+                    size="sm"
+                    v-model="editor.is_delete"
+                    :options="[
+                      { value: null, text: '请选择', disabled: true },
+                      { value: false, text: '否' },
+                      { value: true, text: '是' }
+                    ]"
+                    id="editor-is_delete"
+                    trim
+                  ></nly-form-select>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="更新人"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-create_user"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.create_user"
+                    id="editor-create_user"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="更新人"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="editor-update_user"
+                  class="mb-0"
+                >
+                  <nly-form-input
+                    disabled
+                    size="sm"
+                    :value="editor.update_user"
+                    id="editor-update_user"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+            </nly-row>
+          </nly-card-body>
+        </nly-card>
 
         <template v-slot:modal-footer>
           <nly-button
@@ -915,187 +917,194 @@
       </nly-modal>
 
       <nly-modal v-model="addModal" centered hide-header size="lg">
-        <nly-container fluid>
-          <nly-row>
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户名"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-username"
-                class="mb-0"
-                :invalid-feedback="addFeedback.usernameInvalid"
-                :valid="addValid.usernameState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="add.username"
-                  type="text"
-                  id="add-username"
+        <nly-card header-outline header-variant="info">
+          <nly-card-header>
+            <h5><b>新增用户</b></h5>
+          </nly-card-header>
+          <nly-card-body>
+            <nly-row>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户名"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-username"
+                  class="mb-0"
+                  :invalid-feedback="addFeedback.usernameInvalid"
                   :valid="addValid.usernameState"
-                  @blur="blurUsernameAdd"
-                  @input="changeUsernameAdd"
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="密码"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-password"
-                autocomplete="off"
-                class="mb-0"
-              >
-                <nly-input-group
-                  size="sm"
-                  :invalid-feedback="addFeedback.passwordInvalid"
-                  :valid="addValid.passwordState"
                 >
                   <nly-form-input
                     size="sm"
-                    v-model="add.password"
-                    :type="showPassword ? 'text' : 'password'"
-                    id="add-password"
-                    :valid="addValid.passwordState"
-                    @blur="blurPasswordAdd"
+                    v-model="add.username"
+                    type="text"
+                    id="add-username"
+                    autocomplete="new-username"
+                    :valid="addValid.usernameState"
+                    @blur="blurUsernameAdd"
+                    @input="changeUsernameAdd"
+                    autofocus
                   ></nly-form-input>
-                  <nly-input-group-append is-text>
-                    <nly-icon
-                      :icon="
-                        showPassword
-                          ? 'nlyfont nly-icon-eye-off'
-                          : 'nlyfont nly-icon-eye'
-                      "
-                      @click="showPassword = !showPassword"
-                    />
-                  </nly-input-group-append>
-                </nly-input-group>
-              </nly-form-group>
-            </nly-col>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户类型"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-usertype"
-                class="mb-0"
-              >
-                <nly-form-select
-                  v-model="add.user_type"
-                  :options="usertypeOptions"
-                  id="add-usertype"
-                  size="sm"
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="密码"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-password"
+                  class="mb-0"
                 >
-                </nly-form-select>
-              </nly-form-group>
-            </nly-col>
+                  <nly-input-group
+                    size="sm"
+                    :invalid-feedback="addFeedback.passwordInvalid"
+                    :valid="addValid.passwordState"
+                  >
+                    <nly-form-input
+                      size="sm"
+                      v-model="add.password"
+                      :type="showPassword ? 'text' : 'password'"
+                      id="add-password"
+                      :valid="addValid.passwordState"
+                      @blur="blurPasswordAdd"
+                      autocomplete="new-password"
+                    ></nly-form-input>
+                    <nly-input-group-append is-text>
+                      <nly-icon
+                        :icon="
+                          showPassword
+                            ? 'nlyfont nly-icon-eye-off'
+                            : 'nlyfont nly-icon-eye'
+                        "
+                        @click="showPassword = !showPassword"
+                      />
+                    </nly-input-group-append>
+                  </nly-input-group>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="手机号"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-user_phone"
-                class="mb-0"
-                :invalid-feedback="addFeedback.phoneInvalid"
-                :valid="addValid.phoneState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="add.user_phone"
-                  type="tel"
-                  id="add-user_phone"
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户类型"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-usertype"
+                  class="mb-0"
+                >
+                  <nly-form-select
+                    v-model="add.user_type"
+                    :options="usertypeOptions"
+                    id="add-usertype"
+                    size="sm"
+                  >
+                  </nly-form-select>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="手机号"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-user_phone"
+                  class="mb-0"
+                  :invalid-feedback="addFeedback.phoneInvalid"
                   :valid="addValid.phoneState"
-                  @blur="blurPhoneAdd"
-                  trim
-                  :maxlength="11"
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="邮箱"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-user_email"
-                class="mb-0"
-                :invalid-feedback="addFeedback.emailInvalid"
-                :valid="addValid.emailState"
-              >
-                <nly-form-input
-                  size="sm"
-                  v-model="add.user_email"
-                  type="email"
-                  id="add-user_email"
-                  :valid="addValid.emailState"
-                  @blur="blurEmailAdd"
-                  trim
-                ></nly-form-input>
-              </nly-form-group>
-            </nly-col>
-
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="用户生日"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-user_exp"
-                class="mb-0"
-              >
-                <nly-form-daterangepicker
-                  :value="addSelectUserBirthday"
-                  single-date-picker
-                  :locale-data="addBirthDayLocaleData"
-                  @update="addUserBirthdayUpdate"
-                  size="sm"
-                  show-dropdowns
-                  :ranges="false"
-                  always-show-calendars
-                  auto-apply
                 >
-                  <template v-slot:append>
-                    <nly-input-group-text>
-                      <nly-icon icon="nlyfont nly-icon-time" />
-                    </nly-input-group-text>
-                  </template>
-                </nly-form-daterangepicker>
-              </nly-form-group>
-            </nly-col>
+                  <nly-form-input
+                    size="sm"
+                    v-model="add.user_phone"
+                    type="tel"
+                    id="add-user_phone"
+                    :valid="addValid.phoneState"
+                    @blur="blurPhoneAdd"
+                    trim
+                    :maxlength="11"
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
 
-            <nly-col xs="12" sm="6" class="my-1">
-              <nly-form-group
-                label="性别"
-                label-cols-sm="4"
-                label-align-sm="right"
-                label-size="sm"
-                label-for="add-user_gender"
-                class="mb-0"
-              >
-                <nly-form-select
-                  size="sm"
-                  v-model="add.user_gender"
-                  :options="[
-                    { value: null, text: '请选择', disabled: true },
-                    { value: 1, text: '男' },
-                    { value: 2, text: '女' }
-                  ]"
-                  id="add-user_gender"
-                  trim
-                ></nly-form-select>
-              </nly-form-group>
-            </nly-col>
-          </nly-row>
-        </nly-container>
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="邮箱"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-user_email"
+                  class="mb-0"
+                  :invalid-feedback="addFeedback.emailInvalid"
+                  :valid="addValid.emailState"
+                >
+                  <nly-form-input
+                    size="sm"
+                    v-model="add.user_email"
+                    type="email"
+                    id="add-user_email"
+                    :valid="addValid.emailState"
+                    @blur="blurEmailAdd"
+                    trim
+                  ></nly-form-input>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="用户生日"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-user_exp"
+                  class="mb-0"
+                >
+                  <nly-form-daterangepicker
+                    :value="addSelectUserBirthday"
+                    single-date-picker
+                    :locale-data="addBirthDayLocaleData"
+                    @update="addUserBirthdayUpdate"
+                    size="sm"
+                    show-dropdowns
+                    :ranges="false"
+                    always-show-calendars
+                    auto-apply
+                  >
+                    <template v-slot:append>
+                      <nly-input-group-text>
+                        <nly-icon icon="nlyfont nly-icon-time" />
+                      </nly-input-group-text>
+                    </template>
+                  </nly-form-daterangepicker>
+                </nly-form-group>
+              </nly-col>
+
+              <nly-col xs="12" sm="6" class="my-1">
+                <nly-form-group
+                  label="性别"
+                  label-cols-sm="4"
+                  label-align-sm="right"
+                  label-size="sm"
+                  label-for="add-user_gender"
+                  class="mb-0"
+                >
+                  <nly-form-select
+                    size="sm"
+                    v-model="add.user_gender"
+                    :options="[
+                      { value: null, text: '请选择', disabled: true },
+                      { value: 1, text: '男' },
+                      { value: 2, text: '女' }
+                    ]"
+                    id="add-user_gender"
+                    trim
+                  ></nly-form-select>
+                </nly-form-group>
+              </nly-col>
+            </nly-row>
+          </nly-card-body>
+        </nly-card>
 
         <template v-slot:modal-footer>
           <nly-button

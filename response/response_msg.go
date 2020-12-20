@@ -40,6 +40,11 @@ var GetUserListError = OkRet{
 	Msg: "获取用户列表错误",
 }
 
+var AddUserError = OkRet{
+	Code: 200008,
+	Msg: "新增用户错误",
+}
+
 //var JwtError = OkRet{
 //	Code: 200006,
 //	Msg:  "token不能为空",

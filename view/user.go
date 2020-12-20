@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 	"github.com/jinzhu/gorm"
 	"note/global"
 	"note/model"
 	"note/utils"
-	"time"
 )
 
 type RegisterStruct struct {
@@ -32,31 +32,47 @@ type Feilds struct {
 }
 
 type UserListInfo struct {
-	ID                int       `json:"id"`
-	Username          string    `json:"username"`
-	UserPic           string    `json:"user_pic"`
-	UserType          bool      `json:"user_type"`
-	UserPhone         string    `json:"user_phone"`
-	UserEmail         string    `json:"user_email"`
-	UserExp           int       `json:"user_exp"`
-	UserLevel         int       `json:"user_level"`
-	UserBirthday      string    `json:"user_birthday"`
-	UserGender        int       `json:"user_gender"` // 1 男 2 女
-	UserIp            string    `json:"user_ip" gorm:"column:user_ip;default:null"`
-	UserLastLoginIp   string    `json:"user_last_login_ip" gorm:"column:user_last_login_ip;default:null"`
-	UserLastLoginTime time.Time `json:"user_last_login_time" gorm:"column:user_last_login_time;default:null"`
-	CreatedAt         time.Time `json:"create_date" gorm:"column:create_date"`
-	UpdatedAt         time.Time `json:"update_date" gorm:"column:update_date"`
-	DeletedTime       time.Time `json:"deleted_date" gorm:"column:deleted_date;default:null"`
-	IsDelete          bool      `json:"is_delete" gorm:"column:is_delete;default:false"`
-	CreateId          int       `json:"create_id" gorm:"column:create_id;default:null"`
-	UpdateId          int       `json:"update_id" gorm:"column:update_id;default:null"`
+	ID                int    `json:"id"`
+	Username          string `json:"username"`
+	UserPic           string `json:"user_pic"`
+	UserType          bool   `json:"user_type"`
+	UserPhone         string `json:"user_phone"`
+	UserEmail         string `json:"user_email"`
+	UserExp           int    `json:"user_exp"`
+	UserLevel         int    `json:"user_level"`
+	UserBirthday      string `json:"user_birthday"`
+	UserGender        int    `json:"user_gender"` // 1 男 2 女
+	UserIp            string `json:"user_ip"`
+	UserLastLoginIp   string `json:"user_last_login_ip"`
+	UserLastLoginTime string `json:"user_last_login_time"`
+	CreatedAt         string `json:"create_date"`
+	UpdatedAt         string `json:"update_date"`
+	IsDelete          bool   `json:"is_delete"`
 }
 
 type UserListRes struct {
-	Items  []model.User `json:"items"`
-	Fields []Feilds     `json:"fields"`
-	Page   utils.Page   `json:"page"`
+	Items  []UserListInfo `json:"items"`
+	Fields []Feilds       `json:"fields"`
+	Page   utils.Page     `json:"page"`
+}
+
+type CheckUsername struct {
+	Username string `json:"username"`
+}
+
+type CheckUsernameRes struct {
+	CheckResult bool   `json:"check_result"`
+	Msg         string `json:"msg"`
+}
+
+type AddUserInfo struct {
+	Username     string `json:"username" validate:"required,"`
+	Password     string `json:"password" validate:"required,len>5"`
+	UserType     bool   `json:"user_type" validate:"required"`
+	UserPhone    string `json:"user_phone" validate:"required"`
+	UserEmail    string `json:"user_email" validate:"required,email"`
+	UserBirthday string `json:"user_birthday" validate:"required,datetime"`
+	UserGender   int    `json:"user_gender" validate:"required"` // 1 男 2 女
 }
 
 //用户注册
@@ -134,14 +150,25 @@ func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interfac
 	if err != nil {
 		return err, nil
 	}
-	data.Items = items
-	for index, item := range data.Items {
-		data.Items[index].UserPic = fmt.Sprintf("http://%s/%s", c.Request.Host, item.UserPic)
-		//update_time_str,_ :=fmt.Println(item.UpdatedAt.String())
-		//updateTimeStr := item.UpdatedAt.Format("2006-01-02 15:04:05")
-		tt,_:=time.ParseInLocation("2006-01-02 15:04:05", item.UpdatedAt.Format("2006-01-02 15:04:05"), time.Local)
-		fmt.Println(tt.Format("2006-01-02 15:04:05"))
-		data.Items[index].UpdatedAt= tt
+	for _, item := range items {
+		var itemAppend UserListInfo
+		itemAppend.ID = item.ID
+		itemAppend.Username = item.Username
+		itemAppend.CreatedAt = item.CreatedAt.Format("2006-01-02 15:04:05")
+		itemAppend.UpdatedAt = item.UpdatedAt.Format("2006-01-02 15:04:05")
+		itemAppend.UserPic = fmt.Sprintf("http://%s/%s", c.Request.Host, item.UserPic)
+		itemAppend.IsDelete = item.IsDelete
+		itemAppend.UserBirthday = item.UserBirthday
+		itemAppend.UserEmail = item.UserEmail
+		itemAppend.UserExp = item.UserExp
+		itemAppend.UserGender = item.UserGender
+		itemAppend.UserIp = item.UserIp
+		itemAppend.UserLastLoginIp = item.UserLastLoginIp
+		itemAppend.UserLastLoginTime = item.UserLastLoginIp
+		itemAppend.UserLevel = item.UserLevel
+		itemAppend.UserPhone = item.UserPhone
+		itemAppend.UserType = item.UserType
+		data.Items = append(data.Items, itemAppend)
 	}
 	data.Page.Page = pageInfo.Page
 	data.Page.Count = count
@@ -264,4 +291,50 @@ func GenFields(f []Feilds) (res []Feilds) {
 	})
 
 	return f
+}
+
+// 检验用户是否存在
+func CheckUsernameExist(u *CheckUsername) (res CheckUsernameRes) {
+	if !errors.Is(global.NLY_DB.Where("username = ?", u.Username).Find(&model.User{}).Error, gorm.ErrRecordNotFound) {
+		return CheckUsernameRes{
+			CheckResult: true,
+			Msg:         "用户名已存在",
+		}
+	} else {
+		return CheckUsernameRes{
+			CheckResult: false,
+		}
+	}
+}
+
+// 新增用户
+func AddUser(a *AddUserInfo) (res error) {
+	err := validator.New().Struct(&a)
+	if err != nil {
+		println(err)
+		if _, ok := err.(*validator.InvalidValidationError); ok {
+			fmt.Println(err)
+			return
+		}
+		for _, err := range err.(validator.ValidationErrors) {
+
+			fmt.Println(err.Namespace())
+			fmt.Println(err.Field())
+			fmt.Println(err.StructNamespace())
+			fmt.Println(err.StructField())
+			fmt.Println(err.Tag())
+			fmt.Println(err.ActualTag())
+			fmt.Println(err.Kind())
+			fmt.Println(err.Type())
+			fmt.Println(err.Value())
+			fmt.Println(err.Param())
+			fmt.Println()
+		}
+	}
+
+	return errors.New("111")
+	//var username CheckUsername
+	//username.Username = a.Username
+	//isExist := CheckUsernameExist(&username)
+
 }
