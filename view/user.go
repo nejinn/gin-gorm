@@ -4,11 +4,12 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
 	"github.com/jinzhu/gorm"
 	"note/global"
+	"note/middleware"
 	"note/model"
 	"note/utils"
+	"time"
 )
 
 type RegisterStruct struct {
@@ -21,7 +22,7 @@ type LoginStruct struct {
 	Password string `json:"password"`
 }
 
-type Feilds struct {
+type Fields struct {
 	Key          string `json:"key"`
 	Label        string `json:"label"`
 	Class        string `json:"class"`
@@ -35,7 +36,7 @@ type UserListInfo struct {
 	ID                int    `json:"id"`
 	Username          string `json:"username"`
 	UserPic           string `json:"user_pic"`
-	UserType          bool   `json:"user_type"`
+	UserType          int    `json:"user_type"`
 	UserPhone         string `json:"user_phone"`
 	UserEmail         string `json:"user_email"`
 	UserExp           int    `json:"user_exp"`
@@ -52,7 +53,7 @@ type UserListInfo struct {
 
 type UserListRes struct {
 	Items  []UserListInfo `json:"items"`
-	Fields []Feilds       `json:"fields"`
+	Fields []Fields       `json:"fields"`
 	Page   utils.Page     `json:"page"`
 }
 
@@ -66,13 +67,13 @@ type CheckUsernameRes struct {
 }
 
 type AddUserInfo struct {
-	Username     string `json:"username" validate:"required,"`
-	Password     string `json:"password" validate:"required,len>5"`
-	UserType     bool   `json:"user_type" validate:"required"`
-	UserPhone    string `json:"user_phone" validate:"required"`
-	UserEmail    string `json:"user_email" validate:"required,email"`
-	UserBirthday string `json:"user_birthday" validate:"required,datetime"`
-	UserGender   int    `json:"user_gender" validate:"required"` // 1 男 2 女
+	Username     string `json:"username" binding:"required"`
+	Password     string `json:"password" binding:"required"`
+	UserType     int    `json:"user_type" binding:"required"`
+	UserPhone    string `json:"user_phone" binding:"required"`
+	UserEmail    string `json:"user_email" binding:"required,email"`
+	UserBirthday string `json:"user_birthday" binding:"required"`
+	UserGender   int    `json:"user_gender" binding:"required"` // 1 男 2 女
 }
 
 //用户注册
@@ -108,10 +109,12 @@ func Login(r *model.User) (err error, userInfo *model.User) {
 	r.Password = utils.NewMD5([]byte(r.Password))
 
 	global.NLY_DB.Where("username = ? AND password = ?", r.Username, r.Password).First(&loginUser)
-
 	if errors.Is(global.NLY_DB.Where("username = ? AND password = ?", r.Username, r.Password).First(&loginUser).Error, gorm.ErrRecordNotFound) {
 		return errors.New("登录信息错误"), nil
 	}
+	nowTime := time.Now()
+	loginUser.UserLastLoginTime = &nowTime
+	global.NLY_DB.Save(&loginUser)
 	return nil, &loginUser
 }
 
@@ -164,7 +167,10 @@ func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interfac
 		itemAppend.UserGender = item.UserGender
 		itemAppend.UserIp = item.UserIp
 		itemAppend.UserLastLoginIp = item.UserLastLoginIp
-		itemAppend.UserLastLoginTime = item.UserLastLoginIp
+		itemAppend.UserLastLoginTime = ""
+		if item.UserLastLoginTime != nil {
+			itemAppend.UserLastLoginTime = item.UserLastLoginTime.Format("2006-01-02 15:04:05")
+		}
 		itemAppend.UserLevel = item.UserLevel
 		itemAppend.UserPhone = item.UserPhone
 		itemAppend.UserType = item.UserType
@@ -177,8 +183,8 @@ func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interfac
 	return nil, data
 }
 
-func GenFields(f []Feilds) (res []Feilds) {
-	f = append(f, Feilds{
+func GenFields(f []Fields) (res []Fields) {
+	f = append(f, Fields{
 		Key:          "user_pic",
 		Label:        "头像",
 		Class:        "text-center",
@@ -186,7 +192,7 @@ func GenFields(f []Feilds) (res []Feilds) {
 		Fixed:        "left",
 		TdClass:      "custom-tbody-td-background-color-info",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:          "username",
 		Label:        "用户名称",
 		Class:        "text-center",
@@ -194,7 +200,7 @@ func GenFields(f []Feilds) (res []Feilds) {
 		Fixed:        "left",
 		TdClass:      "custom-tbody-td-background-color-info",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:          "id",
 		Label:        "用户id",
 		Class:        "text-center",
@@ -202,7 +208,7 @@ func GenFields(f []Feilds) (res []Feilds) {
 		Fixed:        "left",
 		TdClass:      "custom-tbody-td-background-color-info",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:          "isSelected",
 		Label:        "选中",
 		Class:        "text-center text-info",
@@ -211,77 +217,77 @@ func GenFields(f []Feilds) (res []Feilds) {
 		TdClass:      "custom-tbody-td-background-color-info",
 	})
 
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_type",
 		Label: "类型",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_phone",
 		Label: "电话",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_email",
 		Label: "邮箱",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_exp",
 		Label: "经验",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_level",
 		Label: "等级",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_last_login_time",
 		Label: "最后登录时间",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_birthday",
 		Label: "生日",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_gender",
 		Label: "性别",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "user_ip",
 		Label: "最后登录ip",
 		Class: "text-center",
 	})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "create_date",
 		Label: "注册日期",
 		Class: "text-center",
 	})
-	//f = append(f, Feilds{
+	//f = append(f, Fields{
 	//	Key:   "update_date",
 	//	Label: "更新日期",
 	//	Class: "text-center",
 	//})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:   "is_delete",
 		Label: "已删除",
 		Class: "text-center",
 	})
-	//f = append(f, Feilds{
+	//f = append(f, Fields{
 	//	Key:   "create_user",
 	//	Label: "创建人",
 	//	Class: "text-center",
 	//})
-	//f = append(f, Feilds{
+	//f = append(f, Fields{
 	//	Key:   "update_user",
 	//	Label: "更新人",
 	//	Class: "text-center",
 	//})
-	f = append(f, Feilds{
+	f = append(f, Fields{
 		Key:          "action",
 		Label:        "操作",
 		Class:        "text-center",
@@ -308,33 +314,33 @@ func CheckUsernameExist(u *CheckUsername) (res CheckUsernameRes) {
 }
 
 // 新增用户
-func AddUser(a *AddUserInfo) (res error) {
-	err := validator.New().Struct(&a)
-	if err != nil {
-		println(err)
-		if _, ok := err.(*validator.InvalidValidationError); ok {
-			fmt.Println(err)
-			return
-		}
-		for _, err := range err.(validator.ValidationErrors) {
-
-			fmt.Println(err.Namespace())
-			fmt.Println(err.Field())
-			fmt.Println(err.StructNamespace())
-			fmt.Println(err.StructField())
-			fmt.Println(err.Tag())
-			fmt.Println(err.ActualTag())
-			fmt.Println(err.Kind())
-			fmt.Println(err.Type())
-			fmt.Println(err.Value())
-			fmt.Println(err.Param())
-			fmt.Println()
-		}
+func AddUser(a *AddUserInfo, c *gin.Context) (res error) {
+	if len(a.Password) < 6 {
+		return errors.New("密码不能小于六位")
 	}
 
-	return errors.New("111")
-	//var username CheckUsername
-	//username.Username = a.Username
-	//isExist := CheckUsernameExist(&username)
+	var username CheckUsername
+	username.Username = a.Username
+	isExist := CheckUsernameExist(&username)
+	if isExist.CheckResult {
+		return errors.New(isExist.Msg)
+	}
+	avatar, avatarErr := utils.CreateDefaultAvatar(a.Username)
+	if avatarErr != nil {
+		return errors.New("生成头像失败")
+	}
+	user := middleware.GetJwtUser(c)
+	var NewUser model.User
+	NewUser.Password = utils.NewMD5([]byte(a.Password))
+	NewUser.Username = a.Username
+	NewUser.UserBirthday = a.UserBirthday
+	NewUser.UserEmail = a.UserEmail
+	NewUser.UserPhone = a.UserPhone
+	NewUser.UserGender = a.UserGender
+	NewUser.UserType = a.UserType
+	NewUser.UserPic = avatar
+	NewUser.CreateId = user.ID
+	err := global.NLY_DB.Create(&NewUser).Error
+	return err
 
 }

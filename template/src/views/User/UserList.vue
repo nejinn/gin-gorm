@@ -1468,6 +1468,7 @@ export default {
 
       this.isClickEditorOk = true;
       const params = this.add;
+      console.log(params);
       const obj = this;
       this.$api.HttpsUserList.addUser(obj, params);
     },
@@ -1548,6 +1549,7 @@ export default {
         startDate: "2020-10-19",
         endDate: "2020-10-19"
       };
+      this.add.user_birthday = this.addSelectUserBirthday.startDate;
       this.addModal = true;
     },
 

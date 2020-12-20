@@ -133,9 +133,14 @@ func CheckUsernameExist(c *gin.Context) {
 func AddUser(c *gin.Context) {
 	a := view.AddUserInfo{}
 	if err := c.ShouldBindJSON(&a); err != nil {
-		response.ErrorMsgWithResponseMsg(c, response.AddUserError)
+		response.ErrorWithCustomMsg(c, response.AddUserError.Code, err.Error())
 		return
 	}
-	_ = view.AddUser(&a)
+	err := view.AddUser(&a, c)
 
+	if err !=nil {
+		response.ErrorWithCustomMsg(c, response.AddUserError.Code, err.Error())
+		return
+	}
+	response.OkData(c, response.Ok, global.NLY_NIL_RES)
 }

@@ -4,5 +4,6 @@ export default {
   getLoginUrl: `${ApiBaseUrl}user/login`,
   getUserInfo: `${ApiBaseUrl}user`,
   getUserList: `${ApiBaseUrl}user/list`,
-  checkUsername: `${ApiBaseUrl}user/check_username`
+  checkUsername: `${ApiBaseUrl}user/check_username`,
+  addUser: `${ApiBaseUrl}user/add_user`
 };
