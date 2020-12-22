@@ -9,6 +9,7 @@ import (
 	"note/middleware"
 	"note/model"
 	"note/utils"
+	"strconv"
 	"time"
 )
 
@@ -48,7 +49,7 @@ type UserListInfo struct {
 	UserLastLoginTime string `json:"user_last_login_time"`
 	CreatedAt         string `json:"create_date"`
 	UpdatedAt         string `json:"update_date"`
-	IsDelete          bool   `json:"is_delete"`
+	IsDelete          *bool  `json:"is_delete"`
 }
 
 type UserListRes struct {
@@ -74,6 +75,14 @@ type AddUserInfo struct {
 	UserEmail    string `json:"user_email" binding:"required,email"`
 	UserBirthday string `json:"user_birthday" binding:"required"`
 	UserGender   int    `json:"user_gender" binding:"required"` // 1 男 2 女
+}
+
+type DeleteUserInfo struct {
+	ID int `json:"user_id"`
+}
+
+type DeleteUserListInfo struct {
+	ID []int `json:"user_id"`
 }
 
 //用户注册
@@ -112,6 +121,12 @@ func Login(r *model.User) (err error, userInfo *model.User) {
 	if errors.Is(global.NLY_DB.Where("username = ? AND password = ?", r.Username, r.Password).First(&loginUser).Error, gorm.ErrRecordNotFound) {
 		return errors.New("登录信息错误"), nil
 	}
+	if *loginUser.IsDelete == true {
+		return errors.New("用户已停用"), nil
+	}
+	if loginUser.UserType != 1 {
+		return errors.New("非超级用户不能登录"), nil
+	}
 	nowTime := time.Now()
 	loginUser.UserLastLoginTime = &nowTime
 	global.NLY_DB.Save(&loginUser)
@@ -119,9 +134,26 @@ func Login(r *model.User) (err error, userInfo *model.User) {
 }
 
 // 用户列表
-func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interface{}) {
-	offset := pageInfo.Size * (pageInfo.Page - 1)
-	limit := pageInfo.Size
+func UserList(c *gin.Context) (err error, res interface{}) {
+	//offset := pageInfo.Size * (pageInfo.Page - 1)
+	var limit int
+	var offset int
+	var page int
+	var size int
+	if querySize, isExist := c.GetQuery("size"); isExist == true {
+		size, _ = strconv.Atoi(querySize)
+	} else {
+		size = utils.DefaultSize
+	}
+
+	if queryPage, isExist := c.GetQuery("page"); isExist == true {
+		page, _ = strconv.Atoi(queryPage)
+	} else {
+		page = utils.DefaultPage
+	}
+	limit = size
+	offset = limit * (page - 1)
+
 	var items []model.User
 	var count int
 	var data UserListRes
@@ -135,22 +167,30 @@ func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interfac
 	if userEmail, isExist := c.GetQuery("user_email"); isExist == true {
 		userDb = userDb.Where("user_email LIKE ?", fmt.Sprintf("%s%s%s", "%", userEmail, "%"))
 	}
-	if userType, isExist := c.GetQuery("user_email"); isExist == true {
-		userDb = userDb.Where("user_type LIKE ?", fmt.Sprintf("%s%s%s", "%", userType, "%"))
+	if userType, isExist := c.GetQuery("user_type"); isExist == true {
+		if queryUserType, err := strconv.ParseInt(userType, 10, 64); err == nil {
+			userDb = userDb.Where("user_type = ?", queryUserType)
+		}
 	}
-	if isDelete, isExist := c.GetQuery("user_email"); isExist == true {
-		userDb = userDb.Where("is_delete LIKE ?", fmt.Sprintf("%s%s%s", "%", isDelete, "%"))
+	if isDelete, isExist := c.GetQuery("is_delete"); isExist == true {
+		if queryIsDelete, err := strconv.ParseBool(isDelete); err == nil {
+			userDb = userDb.Where("is_delete = ?", queryIsDelete)
+		}
 	}
-	err = userDb.Find(&model.User{}).Count(&count).Error
+	err = userDb.Find(&items).Count(&count).Error
 	if err != nil {
 		return err, nil
 	}
-	if limit != 0 {
-		err = userDb.Limit(limit).Offset(offset).Find(&items).Error
-	} else {
-		err = userDb.Limit(utils.DefaultSize).Offset(offset).Find(&items).Error
-	}
+	err = userDb.Limit(limit).Offset(offset).Order("id").Find(&items).Error
+	data.Page.Page = page
+	data.Page.Count = count
+	data.Page.Size = size
+	data.Fields = GenFields(data.Fields)
 	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			data.Items = []UserListInfo{}
+			return nil, data
+		}
 		return err, nil
 	}
 	for _, item := range items {
@@ -176,10 +216,6 @@ func UserList(pageInfo *utils.PageInfo, c *gin.Context) (err error, res interfac
 		itemAppend.UserType = item.UserType
 		data.Items = append(data.Items, itemAppend)
 	}
-	data.Page.Page = pageInfo.Page
-	data.Page.Count = count
-	data.Page.Size = pageInfo.Size
-	data.Fields = GenFields(data.Fields)
 	return nil, data
 }
 
@@ -274,7 +310,7 @@ func GenFields(f []Fields) (res []Fields) {
 	//})
 	f = append(f, Fields{
 		Key:   "is_delete",
-		Label: "已删除",
+		Label: "已停用",
 		Class: "text-center",
 	})
 	//f = append(f, Fields{
@@ -343,4 +379,39 @@ func AddUser(a *AddUserInfo, c *gin.Context) (res error) {
 	err := global.NLY_DB.Create(&NewUser).Error
 	return err
 
+}
+
+// 停用用户
+func (s *DeleteUserInfo) DeleteUser() (err error) {
+	var DeleteUser model.User
+	err = global.NLY_DB.Model(&DeleteUser).Where("id = ?", s.ID).Update("is_delete", true).Error
+	if err != nil {
+		return errors.New("停用用户出错")
+	}
+	return nil
+}
+
+// 批量停用用户
+func (s *DeleteUserListInfo) DeleteUserList() (err error) {
+	var DeleteUser model.User
+	deleteWork := global.NLY_DB.Begin()
+	for _, item := range s.ID {
+		err = deleteWork.Model(&DeleteUser).Where("id = ?", item).Update("is_delete", true).Error
+		if err != nil {
+			deleteWork.Rollback()
+			return errors.New("停用用户出错")
+		}
+	}
+	deleteWork.Commit()
+	return nil
+}
+
+// 启用用户
+func (s *DeleteUserInfo) RecoverUser() (err error) {
+	var DeleteUser model.User
+	err = global.NLY_DB.Model(&DeleteUser).Where("id = ?", s.ID).Update("is_delete", false).Error
+	if err != nil {
+		return errors.New("起用用户出错")
+	}
+	return nil
 }

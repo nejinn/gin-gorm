@@ -23,7 +23,7 @@ type User struct {
 	CreatedAt         *time.Time `json:"create_date" gorm:"column:create_date"`
 	UpdatedAt         *time.Time `json:"update_date" gorm:"column:update_date"`
 	DeletedTime       *time.Time `json:"deleted_date" gorm:"column:deleted_date;default:null"`
-	IsDelete          bool      `json:"is_delete" gorm:"column:is_delete;default:false"`
+	IsDelete          *bool      `json:"is_delete" gorm:"column:is_delete;default:false"`
 	CreateId          int       `json:"create_id" gorm:"column:create_id;default:null"`
 	UpdateId          int       `json:"update_id" gorm:"column:update_id;default:null"`
 }

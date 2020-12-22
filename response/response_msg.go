@@ -37,14 +37,23 @@ var GetNavListError = OkRet{
 
 var GetUserListError = OkRet{
 	Code: 200007,
-	Msg: "获取用户列表错误",
+	Msg:  "获取用户列表错误",
 }
 
 var AddUserError = OkRet{
 	Code: 200008,
-	Msg: "新增用户错误",
+	Msg:  "新增用户错误",
 }
 
+var DeleteUserError = OkRet{
+	Code: 200009,
+	Msg:  "删除用户错误",
+}
+
+var RecoverUserError = OkRet{
+	Code: 200010,
+	Msg: "启动用户错误",
+}
 //var JwtError = OkRet{
 //	Code: 200006,
 //	Msg:  "token不能为空",

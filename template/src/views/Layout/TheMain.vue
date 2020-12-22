@@ -3,7 +3,7 @@
     <nly-card class="m-3" header-outline header-variant="secondary">
       <nly-content-header>
         <nly-container fluid>
-          <nly-row row-class="mb-2">
+          <nly-row row-class="mb-2" align-v="end">
             <nly-col sm="6">
               <h1 class="m-0 text-dark">{{ breadcrumbArray.currentName }}</h1>
             </nly-col>

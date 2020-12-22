@@ -12,3 +12,4 @@ type Page struct {
 }
 
 const DefaultSize = 10
+const DefaultPage = 1

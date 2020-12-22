@@ -217,6 +217,7 @@
               v-model="perPageSize"
               id="perPageSizeSelect"
               size="sm"
+              @change="changPerSize"
               :options="perPageSizeOptions"
             ></nly-form-select>
           </nly-form-group>
@@ -231,6 +232,7 @@
         :items="items"
         :fields="fields"
         @row-selected="onRowSelected"
+        :per-page="perPageSize"
         outlined
         :busy="isBusy"
         striped
@@ -530,23 +532,28 @@
         </template>
       </nly-table>
 
-      <nly-pagination
-        ref="pagination"
-        :total="total"
-        :size="perPageSize"
-        :limit="limit"
-        sm
-        show-pg
+      <nly-bootstrap-pagination
+        size="sm"
+        pills
         align="center"
-        :currentPage="currentPage"
-        :firstFunction="firstFunction"
-        :prevFunction="prevFunction"
-        :currentFunction="currentFunction"
-        :nextFunction="nextFunction"
-        :lastFunction="lastFunction"
-        :sizeFunction="sizeFunction"
-        @getCurrentPage="getCurrentPage"
-      />
+        v-model="currentPage"
+        :total-rows="total"
+        :per-page="perPageSize"
+        @page-click="currentFunction"
+      >
+        <template #first-text
+          ><nly-icon icon="oi oi-action-undo page-orange"
+        /></template>
+        <template #prev-text>
+          <span class="oi oi-arrow-thick-left page-green"></span>
+        </template>
+        <template #next-text>
+          <span class="oi oi-arrow-thick-right page-green"></span>
+        </template>
+        <template #last-text
+          ><nly-icon icon="oi oi-action-redo page-orange"
+        /></template>
+      </nly-bootstrap-pagination>
 
       <nly-modal v-model="editorModal" centered hide-header size="lg">
         <nly-card>
@@ -1468,7 +1475,6 @@ export default {
 
       this.isClickEditorOk = true;
       const params = this.add;
-      console.log(params);
       const obj = this;
       this.$api.HttpsUserList.addUser(obj, params);
     },
@@ -1556,8 +1562,7 @@ export default {
     // 启用用户
     launchData(row) {
       const selectedData = {
-        user_id: row.item.id,
-        base_user_id: row.item.base_user
+        user_id: row.item.id
       };
       const obj = this;
       this.$api.HttpsUserList.launchUser(obj, selectedData);
@@ -1594,24 +1599,20 @@ export default {
         });
     },
 
-    // 删除数据
+    // 停用数据
     deleteData(row) {
-      const selectedData = [
-        {
-          user_id: row.item.id,
-          base_user_id: row.item.base_user
-        }
-      ];
-
+      const selectedData = {
+        user_id: row.item.id
+      };
       const obj = this;
       this.$api.HttpsUserList.deleteUser(obj, selectedData);
     },
 
-    // 删除弹框
+    // 停用弹框
     showDeleteMsgBox(row) {
       const username = row.item.username;
       const h = this.$createElement;
-      const msg = `您将删除用户 ${username} `;
+      const msg = `您将停用用户 ${username} `;
       const msgVnodes = h(
         "span",
         { class: "text-sm", style: { "font-weight": 700 } },
@@ -1638,7 +1639,7 @@ export default {
         });
     },
 
-    // 批量删除弹框
+    // 批量停用弹框
     showDeleteListMsgBox() {
       if (this.selected.length === 0) {
         const toastVnode = {
@@ -1659,7 +1660,7 @@ export default {
       const username = usernameList.toString();
       const count = usernameList.length;
       const h = this.$createElement;
-      const msg = `您将删除 ${username} 共计 ${count} 个 用户`;
+      const msg = `您将停用 ${username} 共计 ${count} 个 用户`;
       const msgVnodes = h(
         "span",
         { class: "text-sm", style: { "font-weight": 700 } },
@@ -1686,18 +1687,14 @@ export default {
         });
     },
 
-    // 批量删除数据
+    // 批量停用数据
     deleteListData() {
       const selectedData = this.selected.map(item => {
-        const result = {
-          user_id: item.id,
-          base_user_id: item.base_user
-        };
-        return result;
+        return item.id;
       });
 
       const obj = this;
-      this.$api.HttpsUserList.deleteListUser(obj, selectedData);
+      this.$api.HttpsUserList.deleteListUser(obj, { user_id: selectedData });
     },
 
     // 查询数据
@@ -1710,10 +1707,10 @@ export default {
         this.filter.isdelete === null
       ) {
         const toastVnode = {
-          message: this.$renderContext.allUserQueryCriteria.message,
-          variant: this.$renderContext.allUserQueryCriteria.variant,
-          title: this.$renderContext.allUserQueryCriteria.title,
-          content: this.$renderContext.allUserQueryCriteria.content
+          message: "查询条件不能全部为空",
+          variant: "warning",
+          title: "操作失败",
+          content: "查询失败"
         };
         const obj = this;
         this.$toast(obj, toastVnode);
@@ -1726,10 +1723,10 @@ export default {
       const params = {
         size: this.perPageSize,
         page: this.currentPage,
-        username__icontains: this.filter.username,
+        username: this.filter.username,
         user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
+        user_phone: this.filter.userphone,
+        user_email: this.filter.useremail,
         is_delete: this.filter.isdelete
       };
       this.$api.HttpsUserList.getUserList(obj, params);
@@ -1769,107 +1766,35 @@ export default {
       };
       this.$api.HttpsUserList.getUserList(obj, params);
     },
-
-    // 第一页函数
-    firstFunction() {
-      const obj = this;
-      obj.isBusy = true;
-      const params = {
-        page: 1,
-        size: this.perPageSize,
-        username__icontains: this.filter.username,
-        user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
-        is_delete: this.filter.isdelete
-      };
-      this.$api.HttpsUserList.getUserList(obj, params);
-    },
-
-    // 上一页函数
-    prevFunction() {
-      const obj = this;
-      obj.isBusy = true;
-      const params = {
-        page: this.currentPage - 1,
-        size: this.perPageSize,
-        username__icontains: this.filter.username,
-        user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
-        is_delete: this.filter.isdelete
-      };
-      this.$api.HttpsUserList.getUserList(obj, params);
-    },
-
     // 当前一页函数
-    currentFunction() {
+    currentFunction(nlyaEvt, page) {
       const obj = this;
       obj.isBusy = true;
       const params = {
-        page: this.$refs.pagination.tempalteCurrentPage,
+        page: page,
         size: this.perPageSize,
-        username__icontains: this.filter.username,
+        username: this.filter.username,
         user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
+        user_phone: this.filter.userphone,
+        user_email: this.filter.useremail,
         is_delete: this.filter.isdelete
       };
       this.$api.HttpsUserList.getUserList(obj, params);
     },
-
-    // 下一页函数
-    nextFunction() {
+    // 修改每页数量
+    changPerSize() {
       const obj = this;
       obj.isBusy = true;
       const params = {
-        page: this.currentPage + 1,
+        page: this.currentPage,
         size: this.perPageSize,
-        username__icontains: this.filter.username,
+        username: this.filter.username,
         user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
+        user_phone: this.filter.userphone,
+        user_email: this.filter.useremail,
         is_delete: this.filter.isdelete
       };
       this.$api.HttpsUserList.getUserList(obj, params);
-    },
-
-    // 最后一页函数
-    lastFunction() {
-      const obj = this;
-      obj.isBusy = true;
-      const params = {
-        page: this.$refs.pagination.nlyPgPages,
-        size: this.perPageSize,
-        username__icontains: this.filter.username,
-        user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
-        is_delete: this.filter.isdelete
-      };
-      this.$api.HttpsUserList.getUserList(obj, params);
-    },
-
-    // 改变每页数量函数
-    sizeFunction() {
-      const obj = this;
-      obj.isBusy = true;
-      const params = {
-        page: this.$refs.pagination.tempalteCurrentPage,
-        size: this.perPageSize,
-        keyword: this.keyWord,
-        username__icontains: this.filter.username,
-        user_type: this.filter.usertype,
-        user_phone__icontains: this.filter.userphone,
-        user_email__icontains: this.filter.useremail,
-        is_delete: this.filter.isdelete
-      };
-      this.$api.HttpsUserList.getUserList(obj, params);
-    },
-
-    // 更新当前页码
-    getCurrentPage(data) {
-      this.currentPage = data;
     }
   },
   mounted() {
@@ -1878,10 +1803,10 @@ export default {
     const params = {
       size: this.perPageSize,
       page: 1,
-      username__icontains: this.filter.username,
+      username: this.filter.username,
       user_type: this.filter.usertype,
-      user_phone__icontains: this.filter.userphone,
-      user_email__icontains: this.filter.useremail,
+      user_phone: this.filter.userphone,
+      user_email: this.filter.useremail,
       is_delete: this.filter.isdelete
     };
     this.$api.HttpsUserList.getUserList(obj, params);
@@ -1963,12 +1888,24 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .user-image {
   border-radius: 50%;
   height: 2.1rem;
   margin-right: 10px;
   margin-top: -2px;
   width: 2.1rem;
+}
+.page-orange {
+  color: #e64a19;
+}
+.disabled .page-orange {
+  color: #ff8a65;
+}
+.page-green {
+  color: #00796b;
+}
+.disabled .page-green {
+  color: #4db6ac;
 }
 </style>

@@ -20,15 +20,15 @@ const getUserList = (obj, data) => {
 };
 
 const deleteListUser = (obj, data) => {
-  const url = urlList.deleteUser;
+  const url = urlList.deleteUserList;
   http.nlyPost(url, data).then(
     // eslint-disable-next-line no-unused-vars
     response => {
       const toastVnode = {
-        title: RenderContext.deleteUserContext.title,
-        message: RenderContext.deleteUserContext.message,
-        content: RenderContext.deleteUserContext.content,
-        variant: RenderContext.deleteUserContext.variant
+        title: "操作成功",
+        message: "停用用户成功",
+        content: "停用成功",
+        variant: "success"
       };
       obj.$toast(obj, toastVnode);
       obj.selected = [];
@@ -41,10 +41,10 @@ const deleteListUser = (obj, data) => {
       const nextParams = {
         size: obj.perPageSize,
         page: 1,
-        username__icontains: obj.filter.username,
+        username: obj.filter.username,
         user_type: obj.filter.usertype,
-        user_phone__icontains: obj.filter.userphone,
-        user_email__icontains: obj.filter.useremail,
+        user_phone: obj.filter.userphone,
+        user_email: obj.filter.useremail,
         is_delete: obj.filter.isdelete
       };
 
@@ -61,10 +61,10 @@ const deleteListUser = (obj, data) => {
           const lastParams = {
             page: nextCurrentPage,
             size: obj.perPageSize,
-            username__icontains: obj.filter.username,
+            username: obj.filter.username,
             user_type: obj.filter.usertype,
-            user_phone__icontains: obj.filter.userphone,
-            user_email__icontains: obj.filter.useremail,
+            user_phone: obj.filter.userphone,
+            user_email: obj.filter.useremail,
             is_delete: obj.filter.isdelete
           };
           getUserList(obj, lastParams);
@@ -86,10 +86,10 @@ const deleteUser = (obj, data) => {
     // eslint-disable-next-line no-unused-vars
     response => {
       const toastVnode = {
-        title: RenderContext.deleteUserContext.title,
-        message: RenderContext.deleteUserContext.message,
-        content: RenderContext.deleteUserContext.content,
-        variant: RenderContext.deleteUserContext.variant
+        title: "操作成功",
+        message: "停用用户成功",
+        content: "停用成功",
+        variant: "success"
       };
       obj.$toast(obj, toastVnode);
 
@@ -101,10 +101,10 @@ const deleteUser = (obj, data) => {
       const nextParams = {
         size: obj.perPageSize,
         page: 1,
-        username__icontains: obj.filter.username,
+        username: obj.filter.username,
         user_type: obj.filter.usertype,
-        user_phone__icontains: obj.filter.userphone,
-        user_email__icontains: obj.filter.useremail,
+        user_phone: obj.filter.userphone,
+        user_email: obj.filter.useremail,
         is_delete: obj.filter.isdelete
       };
 
@@ -120,10 +120,10 @@ const deleteUser = (obj, data) => {
           const lastParams = {
             page: nextCurrentPage,
             size: obj.perPageSize,
-            username__icontains: obj.filter.username,
+            username: obj.filter.username,
             user_type: obj.filter.usertype,
-            user_phone__icontains: obj.filter.userphone,
-            user_email__icontains: obj.filter.useremail,
+            user_phone: obj.filter.userphone,
+            user_email: obj.filter.useremail,
             is_delete: obj.filter.isdelete
           };
           getUserList(obj, lastParams);
@@ -145,10 +145,10 @@ const launchUser = (obj, data) => {
     // eslint-disable-next-line no-unused-vars
     response => {
       const toastVnode = {
-        title: RenderContext.launchUserContext.title,
-        message: RenderContext.launchUserContext.message,
-        content: RenderContext.launchUserContext.content,
-        variant: RenderContext.launchUserContext.variant
+        title: "操作成功",
+        message: "启用用户成功",
+        content: "启动成功",
+        variant: "success"
       };
       obj.$toast(obj, toastVnode);
 

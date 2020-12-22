@@ -13,10 +13,9 @@ import (
 	"note/response"
 )
 
+// 获取用户列表
 func GetUserList(c *gin.Context) {
-	l := utils.PageInfo{}
-	_ = c.ShouldBindJSON(&l)
-	err, data := view.UserList(&l, c)
+	err, data := view.UserList(c)
 	if err != nil {
 		response.ErrorWithCustomMsg(c, response.GetUserListError.Code, err.Error())
 		return
@@ -24,6 +23,7 @@ func GetUserList(c *gin.Context) {
 	response.OkData(c, response.Ok, data)
 }
 
+// 登录用户
 func LoginAdmin(c *gin.Context) {
 	l := view.LoginStruct{}
 	if err := c.ShouldBindJSON(&l); err != nil {
@@ -138,8 +138,53 @@ func AddUser(c *gin.Context) {
 	}
 	err := view.AddUser(&a, c)
 
-	if err !=nil {
+	if err != nil {
 		response.ErrorWithCustomMsg(c, response.AddUserError.Code, err.Error())
+		return
+	}
+	response.OkData(c, response.Ok, global.NLY_NIL_RES)
+}
+
+// 停用用户
+func StopUser(c *gin.Context) {
+	s := view.DeleteUserInfo{}
+	if err := c.ShouldBindJSON(&s); err != nil {
+		response.ErrorWithCustomMsg(c, response.DeleteUserError.Code, err.Error())
+		return
+	}
+	err := s.DeleteUser()
+	if err != nil {
+		response.ErrorWithCustomMsg(c, response.DeleteUserError.Code, err.Error())
+		return
+	}
+	response.OkData(c, response.Ok, global.NLY_NIL_RES)
+}
+
+// 批量停用用户
+func StopUserList(c *gin.Context) {
+	s := view.DeleteUserListInfo{}
+	if err := c.ShouldBindJSON(&s); err != nil {
+		response.ErrorWithCustomMsg(c, response.DeleteUserError.Code, err.Error())
+		return
+	}
+	err := s.DeleteUserList()
+	if err != nil {
+		response.ErrorWithCustomMsg(c, response.DeleteUserError.Code, err.Error())
+		return
+	}
+	response.OkData(c, response.Ok, global.NLY_NIL_RES)
+}
+
+// 启用用户
+func RecoverUser(c *gin.Context) {
+	r := view.DeleteUserInfo{}
+	if err := c.ShouldBindJSON(&r); err != nil {
+		response.ErrorWithCustomMsg(c, response.RecoverUserError.Code, err.Error())
+		return
+	}
+	err := r.RecoverUser()
+	if err != nil {
+		response.ErrorWithCustomMsg(c, response.RecoverUserError.Code, err.Error())
 		return
 	}
 	response.OkData(c, response.Ok, global.NLY_NIL_RES)
