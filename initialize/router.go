@@ -34,6 +34,7 @@ func Routers() *gin.Engine {
 	}
 	PrivateApiGroup := Router.Group("api/v1/")
 	PrivateApiGroup.Use(middleware.JWTAuthMiddleware())
+	PrivateApiGroup.Use(middleware.VisitLog())
 	{
 		router.InitNavRouers(PrivateApiGroup)
 		router.InitProviderUserRouers(PrivateApiGroup)
