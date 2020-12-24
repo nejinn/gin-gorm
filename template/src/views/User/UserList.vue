@@ -1807,7 +1807,8 @@ export default {
       user_type: this.filter.usertype,
       user_phone: this.filter.userphone,
       user_email: this.filter.useremail,
-      is_delete: this.filter.isdelete
+      is_delete: this.filter.isdelete,
+      url: "/user/list"
     };
     this.$api.HttpsUserList.getUserList(obj, params);
   },
