@@ -1,6 +1,6 @@
 <template>
   <nly-content-wrapper>
-    <nly-card class="m-3" header-outline header-variant="secondary">
+    <!-- <nly-card class="m-3" header-outline header-variant="secondary">
       <nly-content-header>
         <nly-container fluid>
           <nly-row row-class="mb-2" align-v="end">
@@ -16,9 +16,9 @@
           </nly-row>
         </nly-container>
       </nly-content-header>
-    </nly-card>
+    </nly-card> -->
     <nly-content>
-      <nly-row>
+      <nly-row class="p-3">
         <nly-col>
           <router-view />
         </nly-col>
@@ -29,39 +29,39 @@
 
 <script>
 export default {
-  name: "TheMain",
-  computed: {
-    breadcrumbArray() {
-      const routerArray = [];
-      this.$route.matched.forEach(item => {
-        if (item.name == this.$route.name) {
-          routerArray.push({
-            text: item.meta.title,
-            active: true,
-            to: item.path
-          });
-        } else {
-          if (item.path == "") {
-            if (this.$route.name !== "Home") {
-              routerArray.push({
-                text: item.meta.title,
-                to: "/"
-              });
-            }
-          } else {
-            routerArray.push({
-              text: item.meta.title,
-              to: item.path
-            });
-          }
-        }
-      });
+  name: "TheMain"
+  // computed: {
+  //   breadcrumbArray() {
+  //     const routerArray = [];
+  //     this.$route.matched.forEach(item => {
+  //       if (item.name == this.$route.name) {
+  //         routerArray.push({
+  //           text: item.meta.title,
+  //           active: true,
+  //           to: item.path
+  //         });
+  //       } else {
+  //         if (item.path == "") {
+  //           if (this.$route.name !== "Home") {
+  //             routerArray.push({
+  //               text: item.meta.title,
+  //               to: "/"
+  //             });
+  //           }
+  //         } else {
+  //           routerArray.push({
+  //             text: item.meta.title,
+  //             to: item.path
+  //           });
+  //         }
+  //       }
+  //     });
 
-      return {
-        breadcrumbItems: routerArray,
-        currentName: this.$route.matched.slice(-1)[0].meta.title
-      };
-    }
-  }
+  //     return {
+  //       breadcrumbItems: routerArray,
+  //       currentName: this.$route.matched.slice(-1)[0].meta.title
+  //     };
+  //   }
+  // }
 };
 </script>

@@ -94,6 +94,13 @@
             </nly-row>
           </nly-form>
         </nly-card-body>
+        <nly-card-footer>
+          <div>Demo 测试帐号</div>
+          <nly-row>
+            <nly-col>帐号：admin</nly-col>
+            <nly-col>密码：123456</nly-col>
+          </nly-row>
+        </nly-card-footer>
       </nly-card>
     </div>
   </div>

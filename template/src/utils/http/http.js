@@ -6,7 +6,7 @@ import router from "../../router";
 // import RenderContext from "../render-context/context";
 
 axios.defaults.timeout = 50000;
-axios.defaults.baseURL = "http://localhost:8888/";
+axios.defaults.baseURL = "http://gin-api.nejinn.com/";
 
 // http request 拦截器
 axios.interceptors.request.use(
@@ -58,7 +58,7 @@ axios.interceptors.response.use(
           ret.msg = "请求错误";
           return Promise.reject(ret);
         case 401:
-          router.replace({
+          router.push({
             path: "/login",
             query: { redirect: router.currentRoute.fullPath }
           });
@@ -82,7 +82,7 @@ axios.interceptors.response.use(
           ret.msg = "请求超时";
           return Promise.reject(ret);
         case 500:
-          router.replace({
+          router.push({
             path: "/500"
           });
           ret.code = 500;
@@ -97,7 +97,7 @@ axios.interceptors.response.use(
           ret.msg = "网关错误";
           return Promise.reject(ret);
         case 503:
-          router.replace({
+          router.push({
             path: "/500"
           });
           ret.code = 503;
@@ -117,7 +117,7 @@ axios.interceptors.response.use(
           return Promise.reject(ret);
       }
     } else {
-      router.replace({
+      router.push({
         path: "/500"
       });
       ret.code = 503;
@@ -291,7 +291,7 @@ export default {
     const { code, msg } = ret;
 
     if (code == 100002) {
-      obj.$router.replace({
+      obj.$router.push({
         path: "/login",
         query: { redirect: router.currentRoute.fullPath }
       });

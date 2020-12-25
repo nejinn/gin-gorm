@@ -19,3 +19,11 @@ type VisitApi struct {
 	CreatedAt *time.Time `json:"create_date" gorm:"column:create_date"`
 	VisitIp   string     `json:"visit_ip"`
 }
+
+// 访问量表
+type VisitUser struct {
+	ID        int        `json:"id" gorm:"primary_key"`
+	UserId    int        `json:"user_id"`
+	CreatedAt *time.Time `json:"create_date" gorm:"column:create_date"`
+	VisitIp   string     `json:"visit_ip"`
+}

@@ -4,108 +4,14 @@
       <nly-nav-item v-nly-sidebar-collapse.sidebar-collapse>
         <nly-icon icon="nlyfont nly-icon-logo-windows" />
       </nly-nav-item>
-      <nly-nav-item
-        active
-        class="d-none d-sm-inline-block"
-        :to="{ name: 'collapse' }"
-        >首页</nly-nav-item
-      >
-
-      <nly-nav-dropdown
-        id="menudropdon1"
-        :popup="true"
-        :dropdown-toggle="true"
-        menu-class="border-0"
-        size="xl"
-        class="d-none d-sm-inline-block"
-      >
-        <template slot="linkcontent">
-          测试
-          <nly-icon icon="nlyfont nly-icon-notification-fill" />
-        </template>
-        <template slot="menucontent">
-          <nly-nav-item :nav-item="false" dropdown-item to="/"
-            >我是nav-item="false"</nly-nav-item
-          >
-          <nly-nav-item :nav-item="false" dropdown-item to="nav"
-            >dropdown-item</nly-nav-item
-          >
-
-          <nly-nav-item :nav-item="false" dropdown-item to="/" disabled
-            >我是disabled</nly-nav-item
-          >
-          <nly-nav-item :nav-item="false" dropdown-item to="nav" append
-            >我是append</nly-nav-item
-          >
-
-          <nly-nav-dropdown
-            id="menudropdon2"
-            hover
-            :nav-item="false"
-            submenu
-            :nav-link="false"
-            dropdown-item
-            dropdown-toggle
-            size="lg"
-            direction="none"
-          >
-            <template slot="linkcontent">我是悬浮菜单</template>
-            <template slot="menucontent">
-              <nly-nav-item
-                :nav-item="false"
-                dropdown-item
-                :to="{ name: 'button' }"
-                >我是nav-item="false"</nly-nav-item
-              >
-              <nly-nav-item :nav-item="false" dropdown-item
-                >dropdown-item</nly-nav-item
-              >
-
-              <nly-nav-dropdown
-                :nav-item="false"
-                submenu
-                :nav-link="false"
-                dropdown-item
-                dropdown-toggle
-                direction="none"
-                id="menudropdon3"
-              >
-                <template slot="linkcontent">我是三级</template>
-                <template slot="menucontent">
-                  <nly-nav-item
-                    :nav-item="false"
-                    dropdown-item
-                    :to="{ name: 'button' }"
-                    >我是nav-item="false"</nly-nav-item
-                  >
-                  <nly-nav-item :nav-item="false" dropdown-item
-                    >dropdown-item</nly-nav-item
-                  >
-                </template>
-              </nly-nav-dropdown>
-            </template>
-          </nly-nav-dropdown>
-        </template>
-      </nly-nav-dropdown>
-
-      <nly-nav-dropdown
-        :popup="true"
-        :dropdown-toggle="true"
-        menu-class="border-0"
-        size="xl"
-        hover
-        item-class="d-none d-sm-inline-block"
-      >
-        <template slot="linkcontent">我是悬浮菜单</template>
-        <template slot="menucontent">
-          <nly-nav-item :nav-item="false" dropdown-item to="/"
-            >我是nav-item="false"</nly-nav-item
-          >
-          <nly-nav-item :nav-item="false" dropdown-item to="nav"
-            >dropdown-item</nly-nav-item
-          >
-        </template>
-      </nly-nav-dropdown>
+      <nly-row align-v="center">
+        <nly-col class="d-none d-md-block">
+          <nly-breadcrumb
+            :item="breadcrumbArray.breadcrumbItems"
+            breadcrumb-class="align-items-center p-0 ml-2 mr-0 mt-0 mb-0 bg-transparent"
+          />
+        </nly-col>
+      </nly-row>
     </nly-navbar-nav>
     <nly-navbar-nav class="ml-auto">
       <nly-nav-dropdown
@@ -232,6 +138,42 @@ export default {
         name: "Login"
       });
       this.$store.commit("clearLoginUserInfo");
+    }
+  },
+  computed: {
+    breadcrumbArray() {
+      const routerArray = [];
+      this.$route.matched.forEach(item => {
+        if (item.name == this.$route.name) {
+          routerArray.push({
+            text: item.meta.title,
+            active: true,
+            to: item.path,
+            linkClass: "text-orange"
+          });
+        } else {
+          if (item.path == "") {
+            if (this.$route.name !== "Home") {
+              routerArray.push({
+                text: item.meta.title,
+                to: "/",
+                linkClass: "text-info"
+              });
+            }
+          } else {
+            routerArray.push({
+              text: item.meta.title,
+              to: item.path,
+              linkClass: "text-info"
+            });
+          }
+        }
+      });
+
+      return {
+        breadcrumbItems: routerArray,
+        currentName: this.$route.matched.slice(-1)[0].meta.title
+      };
     }
   }
 };

@@ -21,6 +21,8 @@ func RegisterModel(db *gorm.DB) {
 	global.NLY_LOG.Info("迁移表 VisitApi 成功")
 	db.AutoMigrate(&model.VisitPage{})
 	global.NLY_LOG.Info("迁移表 VisitPage 成功")
+	db.AutoMigrate(&model.VisitUser{})
+	global.NLY_LOG.Info("迁移表 VisitUser 成功")
 	global.NLY_LOG.Info("迁移数据库成功")
 }
 

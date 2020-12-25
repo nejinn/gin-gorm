@@ -52,8 +52,14 @@ var DeleteUserError = OkRet{
 
 var RecoverUserError = OkRet{
 	Code: 200010,
-	Msg: "启动用户错误",
+	Msg:  "启动用户错误",
 }
+
+var InfoBoxError = OkRet{
+	Code: 200011,
+	Msg:  "获取infox信息错误",
+}
+
 //var JwtError = OkRet{
 //	Code: 200006,
 //	Msg:  "token不能为空",

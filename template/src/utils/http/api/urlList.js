@@ -8,5 +8,6 @@ export default {
   addUser: `${ApiBaseUrl}user/add_user`,
   deleteUser: `${ApiBaseUrl}user/delete_user`,
   deleteUserList: `${ApiBaseUrl}user/delete_user_list`,
-  launchUser: `${ApiBaseUrl}user/recover_user`
+  launchUser: `${ApiBaseUrl}user/recover_user`,
+  infoBox: `${ApiBaseUrl}dashboard`
 };

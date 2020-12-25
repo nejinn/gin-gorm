@@ -34,6 +34,10 @@ func LoginAdmin(c *gin.Context) {
 	if err, userInfo := view.Login(user); err != nil {
 		response.ErrorWithCustomMsg(c, response.LoginError.Code, err.Error())
 	} else {
+		var uv model.VisitUser
+		uv.VisitIp = c.ClientIP()
+		uv.UserId = userInfo.ID
+		global.NLY_DB.Create(&uv)
 		middleware.DispenseToken(c, userInfo)
 	}
 }

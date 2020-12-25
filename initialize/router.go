@@ -38,6 +38,7 @@ func Routers() *gin.Engine {
 	{
 		router.InitNavRouers(PrivateApiGroup)
 		router.InitProviderUserRouers(PrivateApiGroup)
+		router.InitDashRouers(PrivateApiGroup)
 	}
 	global.NLY_LOG.Info("全部路由注册成功")
 	return Router

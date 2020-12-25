@@ -237,8 +237,8 @@
         :busy="isBusy"
         striped
         bordered
-        sticky-header
         hover
+        responsive
         small
         show-empty
         empty-text="空空如也"
@@ -531,6 +531,7 @@
           </nly-button>
         </template>
       </nly-table>
+      <!-- </div> -->
 
       <nly-bootstrap-pagination
         size="sm"
@@ -540,6 +541,7 @@
         :total-rows="total"
         :per-page="perPageSize"
         @page-click="currentFunction"
+        class="mt-3"
       >
         <template #first-text
           ><nly-icon icon="oi oi-action-undo page-orange"

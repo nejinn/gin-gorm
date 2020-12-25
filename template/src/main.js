@@ -24,6 +24,9 @@ Vue.prototype.$api = Api;
 
 Vue.config.productionTip = false;
 
+import HighchartsVue from "highcharts-vue";
+Vue.use(HighchartsVue);
+
 router.beforeEach((to, from, next) => {
   // 判断跳转的路由是否需要登录
   if (to.meta.login) {
